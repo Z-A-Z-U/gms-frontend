@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visitors Management - Gate Management System</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+
+      <div class="brand-text">
+
+        <div class="brand-title">
+          GMS SECURE
+          <span class="brand-tag">v2.4</span>
+        </div>
+
+        <div class="brand-subtitle">
+          Industrial Park Gate System
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="sidebar-nav">
+
+      <!-- CORE OPERATIONS -->
+      <div class="nav-section-title">
+        Core Operations
+      </div>
+
+
+      <div class="nav-item">
+        <a href="dashboard.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+
+          <span>Dashboard</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="gate-monitoring.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="m4.93 4.93 4.24 4.24"/>
+            <path d="m14.83 9.17 4.24-4.24"/>
+            <path d="m14.83 14.83 4.24 4.24"/>
+            <path d="m9.17 14.83-4.24 4.24"/>
+          </svg>
+
+          <span>Gate Monitoring</span>
+
+          <span class="nav-badge badge-primary">
+            2 GATES
+          </span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="vehicles.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8c-.3.5-.1 1.2.4 1.5.2.1.5.2.7.2H5v3c0 .6.4 1 1 1h2"/>
+            <circle cx="7" cy="17" r="2"/>
+            <circle cx="17" cy="17" r="2"/>
+          </svg>
+
+          <span>Vehicles</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="visitors.html" class="nav-link active">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+
+          <span>Visitors</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="qr-access.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+
+          <span>QR Access</span>
+
+        </a>
+      </div>
+
+
+      <!-- FREIGHT & LOGISTICS -->
+      <div class="nav-section-title">
+        Freight & Logistics
+      </div>
+
+
+      <div class="nav-item">
+        <a href="logistics.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+
+          <span>Logistics</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="items-out.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+
+          <span>Items Out</span>
+
+        </a>
+      </div>
+
+
+      <!-- SURVEILLANCE & AUDIT -->
+      <div class="nav-section-title">
+        Surveillance & Audit
+      </div>
+
+
+      <div class="nav-item">
+        <a href="cameras.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+
+          <span>Cameras</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="access-logs.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+
+          <span>Access Logs</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="companies.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+            <line x1="9" y1="22" x2="9" y2="22.01"/>
+            <line x1="15" y1="22" x2="15" y2="22.01"/>
+            <line x1="9" y1="6" x2="9" y2="6.01"/>
+            <line x1="15" y1="6" x2="15" y2="6.01"/>
+            <line x1="9" y1="10" x2="9" y2="10.01"/>
+            <line x1="15" y1="10" x2="15" y2="10.01"/>
+            <line x1="9" y1="14" x2="9" y2="14.01"/>
+            <line x1="15" y1="14" x2="15" y2="14.01"/>
+            <line x1="9" y1="18" x2="9" y2="18.01"/>
+            <line x1="15" y1="18" x2="15" y2="18.01"/>
+          </svg>
+
+          <span>Companies</span>
+
+        </a>
+      </div>
+
+
+      <!-- ADMINISTRATION -->
+      <div class="nav-section-title">
+        Administration
+      </div>
+
+
+      <div class="nav-item">
+        <a href="reports.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+
+          <span>Reports</span>
+
+        </a>
+      </div>
+
+    </nav>
+
+
+    <!-- ==================== SIDEBAR USER SESSION ==================== -->
+    <div class="sidebar-footer">
+
+      <div class="user-profile-widget">
+
+        <div class="user-avatar">
+          OT
+        </div>
+
+        <div class="user-details">
+
+          <div class="user-name">
+            Officer Tadesse
+          </div>
+
+          <div class="user-role">
+
+            <span class="user-role-dot"></span>
+
+            Security Officer
+
+          </div>
+
+        </div>
+
+
+        <a href="../index.html"
+           class="btn-logout"
+           title="End Shift / Logout">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+
+            <polyline points="16 17 21 12 16 7"/>
+
+            <line x1="21"
+                  y1="12"
+                  x2="9"
+                  y2="12"/>
+
+          </svg>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="main-wrapper">
+
+
+    <!-- ==================== TOP HEADER ==================== -->
+    <header class="top-header">
+
+      <div class="header-left">
+
+        <button class="btn-sidebar-toggle"
+                id="btnSidebarToggle">
+
+          <svg width="22"
+               height="22"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2">
+
+            <line x1="3"
+                  y1="12"
+                  x2="21"
+                  y2="12"/>
+
+            <line x1="3"
+                  y1="6"
+                  x2="21"
+                  y2="6"/>
+
+            <line x1="3"
+                  y1="18"
+                  x2="21"
+                  y2="18"/>
+
+          </svg>
+
+        </button>
+
+
+        <div class="header-title-group">
+
+          <h1>
+            Visitor Clearance & Management
+          </h1>
+
+          <div class="header-breadcrumb">
+
+            Gate Management System
+
+            <span>/</span>
+
+            Visitors
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="header-right">
+
+
+        <!-- Security Officer Role -->
+        <div class="role-badge-selector">
+
+          <span style="color:#64748b; font-weight:500;">
+            Role:
+          </span>
+
+          <span style="font-weight:600; color:#0f172a;">
+            Security Officer
+          </span>
+
+        </div>
+
+
+        <!-- Live Clock -->
+        <div class="live-clock-widget"
+             id="liveSystemClock">
+
+          --:--:-- EAT
+
+        </div>
+
+
+        <!-- Notifications -->
+        <button class="icon-btn"
+                id="btnNotificationBell">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+
+          </svg>
+
+          <span class="icon-btn-badge">
+            2
+          </span>
+
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- ==================== NOTIFICATIONS ==================== -->
+    <div class="notifications-panel"
+         id="notificationsPanel">
+
+      <div class="panel-header">
+
+        <span class="panel-title">
+          System Alerts
+        </span>
+
+      </div>
+
+
+      <div class="notifications-list"
+           id="headerNotificationsList">
+      </div>
+
+    </div>
+
+
+    <!-- ==================== CONTENT BODY ==================== -->
+    <div class="content-body">
+
+
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+
+        <div class="page-title-desc">
+
+          <h2>
+            Visitor Control Desk
+          </h2>
+
+          <p>
+            Register pre-scheduled and walk-in visitors,
+            verify identity, and issue secure digital QR access passes.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- ==================== VISITOR TABS ==================== -->
+      <div class="nav-tabs">
+
+
+        <!-- PRE-SCHEDULED -->
+        <button class="tab-btn active"
+                id="tabBtnAnnounced">
+
+          <svg width="18"
+               height="18"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2">
+
+            <rect x="3"
+                  y="4"
+                  width="18"
+                  height="18"
+                  rx="2"
+                  ry="2"/>
+
+            <line x1="16"
+                  y1="2"
+                  x2="16"
+                  y2="6"/>
+
+            <line x1="8"
+                  y1="2"
+                  x2="8"
+                  y2="6"/>
+
+            <line x1="3"
+                  y1="10"
+                  x2="21"
+                  y2="10"/>
+
+          </svg>
+
+          Pre-Scheduled Visitors
+
+        </button>
+
+
+        <!-- WALK-IN -->
+        <button class="tab-btn"
+                id="tabBtnWalkin">
+
+          <svg width="18"
+               height="18"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2">
+
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+
+            <circle cx="8.5"
+                    cy="7"
+                    r="4"/>
+
+            <line x1="20"
+                  y1="8"
+                  x2="20"
+                  y2="14"/>
+
+            <line x1="23"
+                  y1="11"
+                  x2="17"
+                  y2="11"/>
+
+          </svg>
+
+          Register Walk-in Visitor
+
+        </button>
+
+      </div>
+
+
+      <!-- ========================================================= -->
+      <!-- TAB 1: PRE-SCHEDULED VISITORS -->
+      <!-- ========================================================= -->
+      <div class="tab-content active"
+           id="tabContentAnnounced">
+
+
+        <div class="card">
+
+
+          <div class="card-header">
+
+
+            <div class="card-title">
+
+              <svg width="18"
+                   height="18"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2">
+
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+
+                <polyline points="14 2 14 8 20 8"/>
+
+              </svg>
+
+              Pre-Scheduled Visitor Manifest
+
+            </div>
+
+
+            <!-- ADD PRE-SCHEDULED VISITOR -->
+            <button class="btn btn-primary"
+                    id="btnAddPreScheduledVisitor">
+
+              <svg viewBox="0 0 24 24">
+
+                <line x1="12"
+                      y1="5"
+                      x2="12"
+                      y2="19"/>
+
+                <line x1="5"
+                      y1="12"
+                      x2="19"
+                      y2="12"/>
+
+              </svg>
+
+              Add Pre-Scheduled Visitor
+
+            </button>
+
+          </div>
+
+
+          <div style="
+            padding:12px 20px;
+            border-bottom:1px solid #e2e8f0;
+            background:#f8fafc;
+          ">
+
+            <span style="
+              font-size:0.8rem;
+              color:#64748b;
+            ">
+
+              Security Officer-created visitor passes.
+              QR access becomes valid on the scheduled visit date.
+
+            </span>
+
+          </div>
+
+
+          <div class="table-container">
+
+            <table class="data-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>
+                    Visitor Name & Email
+                  </th>
+
+                  <th>
+                    Phone Number
+                  </th>
+
+                  <th>
+                    Visiting Company
+                  </th>
+
+                  <th>
+                    Plate Number
+                  </th>
+
+                  <th>
+                    Visit Date
+                  </th>
+
+                  <th>
+                    QR Status
+                  </th>
+
+                  <th>
+                    Gate Check-in
+                  </th>
+
+                  <th>
+                    Action
+                  </th>
+
+                </tr>
+
+              </thead>
+
+
+              <tbody id="announcedVisitorsTableBody">
+
+                <!-- Rendered by visitors.js -->
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ========================================================= -->
+      <!-- TAB 2: WALK-IN VISITOR -->
+      <!-- ========================================================= -->
+      <div class="tab-content"
+           id="tabContentWalkin">
+
+
+        <div style="
+          display:grid;
+          grid-template-columns:1.1fr 1fr;
+          gap:24px;
+        ">
+
+
+          <!-- ==================== REGISTRATION FORM ==================== -->
+          <div class="card">
+
+
+            <div class="card-header">
+
+
+              <div class="card-title">
+
+                <svg width="18"
+                     height="18"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="#0284c7"
+                     stroke-width="2">
+
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+
+                  <circle cx="8.5"
+                          cy="7"
+                          r="4"/>
+
+                </svg>
+
+                Register Walk-in Visitor
+
+              </div>
+
+
+              <span class="badge badge-info">
+
+                On-Site Gate Registration
+
+              </span>
+
+            </div>
+
+
+            <form id="walkinRegistrationForm">
+
+
+              <div class="card-body">
+
+
+                <!-- NAME + PHONE -->
+                <div class="form-row">
+
+
+                  <div class="form-group">
+
+                    <label class="form-label required">
+                      Visitor Full Name
+                    </label>
+
+                    <input type="text"
+                           id="walkinName"
+                           class="form-input"
+                           placeholder="e.g. Hanna Wolde"
+                           required>
+
+                  </div>
+
+
+                  <div class="form-group">
+
+                    <label class="form-label required">
+                      Phone Number
+                    </label>
+
+                    <input type="tel"
+                           id="walkinPhone"
+                           class="form-input"
+                           placeholder="+251 91 234 5678"
+                           required>
+
+                  </div>
+
+                </div>
+
+
+                <!-- EMAIL + COMPANY -->
+                <div class="form-row">
+
+
+                  <div class="form-group">
+
+                    <label class="form-label">
+                      Email Address
+                    </label>
+
+                    <input type="email"
+                           id="walkinEmail"
+                           class="form-input"
+                           placeholder="visitor@example.et">
+
+                  </div>
+
+
+                  <div class="form-group">
+
+                    <label class="form-label required">
+                      Company / Office Visiting
+                    </label>
+
+                    <select id="walkinCompany"
+                            class="form-select"
+                            required>
+
+                      <!-- Populated by visitors.js -->
+
+                    </select>
+
+                  </div>
+
+                </div>
+
+
+                <!-- PLATE + ID TYPE -->
+                <div class="form-row">
+
+
+                  <div class="form-group">
+
+                    <label class="form-label">
+
+                      Vehicle Plate Number
+
+                      <span style="font-weight:400;">
+                        (If Arrived by Car)
+                      </span>
+
+                    </label>
+
+                    <input type="text"
+                           id="walkinPlate"
+                           class="form-input"
+                           placeholder="e.g. 3-B11223">
+
+                  </div>
+
+
+                  <div class="form-group">
+
+                    <label class="form-label required">
+                      ID Document Type
+                    </label>
+
+                    <select id="walkinIdType"
+                            class="form-select"
+                            required>
+
+                      <option value="National ID (Kebele / Fayda)">
+                        National ID (Kebele / Fayda)
+                      </option>
+
+                      <option value="Passport / Foreign ID">
+                        Passport / Foreign ID
+                      </option>
+
+                      <option value="Driver License">
+                        Driver License
+                      </option>
+
+                      <option value="Company / Staff ID">
+                        Company / Staff ID
+                      </option>
+
+                    </select>
+
+                  </div>
+
+                </div>
+
+
+                <!-- PURPOSE -->
+                <div class="form-group">
+
+                  <label class="form-label">
+                    Purpose of Visit
+                  </label>
+
+                  <input type="text"
+                         id="walkinPurpose"
+                         class="form-input"
+                         placeholder="e.g. Official Consultation, Delivery Handover, Interview">
+
+                </div>
+
+
+                <!-- ID DOCUMENT -->
+                <div class="form-group">
+
+                  <label class="form-label">
+                    Upload / Scan ID Document
+                  </label>
+
+
+                  <label class="file-upload-dropzone">
+
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor">
+
+                      <rect x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="2"/>
+
+                      <circle cx="8.5"
+                              cy="8.5"
+                              r="1.5"/>
+
+                      <polyline points="21 15 16 10 5 21"/>
+
+                    </svg>
+
+
+                    <p>
+
+                      <strong>
+                        Click to browse
+                      </strong>
+
+                      or snap photo of ID card
+
+                    </p>
+
+
+                    <input type="file"
+                           id="walkinIdFile"
+                           accept="image/*"
+                           style="display:none;">
+
+                  </label>
+
+
+                  <div class="image-preview-box"
+                       id="idImagePreview">
+
+                    <img id="idPreviewImg"
+                         src=""
+                         alt="ID Preview">
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- FORM FOOTER -->
+              <div class="card-footer">
+
+
+                <span style="
+                  font-size:0.75rem;
+                  color:#64748b;
+                ">
+
+                  First valid QR scan = Entry.
+                  Second valid QR scan = Exit.
+
+                </span>
+
+
+                <button type="submit"
+                        class="btn btn-primary"
+                        id="btnVerifyRegisterVisitor">
+
+                  <svg viewBox="0 0 24 24">
+
+                    <polyline points="20 6 9 17 4 12"/>
+
+                  </svg>
+
+                  Verify & Register Visitor
+
+                </button>
+
+              </div>
+
+            </form>
+
+          </div>
+
+
+          <!-- ==================== WALK-IN LEDGER ==================== -->
+          <div class="card">
+
+
+            <div class="card-header">
+
+
+              <div class="card-title">
+
+                <svg width="18"
+                     height="18"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+
+                </svg>
+
+                Today's Walk-in Access Passes
+
+              </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+              <table class="data-table">
+
+                <thead>
+
+                  <tr>
+
+                    <th>
+                      Visitor
+                    </th>
+
+                    <th>
+                      Phone
+                    </th>
+
+                    <th>
+                      Company
+                    </th>
+
+                    <th>
+                      Plate
+                    </th>
+
+                    <th>
+                      Time
+                    </th>
+
+                    <th>
+                      Status
+                    </th>
+
+                    <th>
+                      Scans
+                    </th>
+
+                    <th>
+                      QR
+                    </th>
+
+                  </tr>
+
+                </thead>
+
+
+                <tbody id="walkinVisitorsTableBody">
+
+                  <!-- Rendered by visitors.js -->
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- PRE-SCHEDULED VISITOR MODAL -->
+<!-- ========================================================= -->
+<div class="modal-backdrop"
+     id="preScheduledVisitorModal">
+
+
+  <div class="modal-dialog">
+
+
+    <div class="modal-header">
+
+
+      <div class="modal-title">
+
+        <svg width="20"
+             height="20"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="#0284c7"
+             stroke-width="2">
+
+          <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+
+          <circle cx="8.5"
+                  cy="7"
+                  r="4"/>
+
+          <path d="M20 8v6"/>
+
+          <path d="M23 11h-6"/>
+
+        </svg>
+
+        Add Pre-Scheduled Visitor
+
+      </div>
+
+
+      <button class="modal-close-btn"
+              type="button"
+              onclick="closeModal('preScheduledVisitorModal')">
+
+        &times;
+
+      </button>
+
+    </div>
+
+
+    <form id="preScheduledVisitorForm">
+
+
+      <div class="modal-body">
+
+
+        <!-- FULL NAME + PHONE -->
+        <div class="form-row">
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Guest Full Name
+            </label>
+
+            <input type="text"
+                   id="preVisitorName"
+                   class="form-input"
+                   placeholder="e.g. Samuel Bekele"
+                   required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Phone Number
+            </label>
+
+            <input type="tel"
+                   id="preVisitorPhone"
+                   class="form-input"
+                   placeholder="+251 91 234 5678"
+                   required>
+
+          </div>
+
+        </div>
+
+
+        <!-- EMAIL + COMPANY -->
+        <div class="form-row">
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Email Address
+            </label>
+
+            <input type="email"
+                   id="preVisitorEmail"
+                   class="form-input"
+                   placeholder="visitor@example.et">
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Company / Organization
+            </label>
+
+            <select id="preVisitorCompany"
+                    class="form-select"
+                    required>
+
+              <option value="">
+                -- Select Company / Organization --
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <!-- VISIT DATE + PLATE -->
+        <div class="form-row">
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Visit Date
+            </label>
+
+            <input type="date"
+                   id="preVisitorDate"
+                   class="form-input"
+                   required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+
+              Vehicle Plate Number
+
+              <span style="font-weight:400;">
+                (Optional)
+              </span>
+
+            </label>
+
+            <input type="text"
+                   id="preVisitorPlate"
+                   class="form-input"
+                   placeholder="e.g. 3-B11223">
+
+          </div>
+
+        </div>
+
+
+        <!-- ID TYPE -->
+        <div class="form-group">
+
+          <label class="form-label">
+            ID Document Type
+          </label>
+
+          <select id="preVisitorIdType"
+                  class="form-select">
+
+            <option value="">
+              -- Select ID Type --
+            </option>
+
+            <option value="National ID (Kebele / Fayda)">
+              National ID (Kebele / Fayda)
+            </option>
+
+            <option value="Passport / Foreign ID">
+              Passport / Foreign ID
+            </option>
+
+            <option value="Driver License">
+              Driver License
+            </option>
+
+            <option value="Company / Staff ID">
+              Company / Staff ID
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- INFORMATION NOTE -->
+        <div style="
+          margin-top:16px;
+          padding:12px 14px;
+          border:1px solid #bae6fd;
+          background:#f0f9ff;
+          border-radius:8px;
+          color:#075985;
+          font-size:0.8rem;
+          line-height:1.5;
+        ">
+
+          <strong>
+            Digital Pass:
+          </strong>
+
+          The visitor's QR pass will be generated after registration.
+          The QR becomes valid only on the scheduled visit date.
+          The first valid scan records entry and the second valid scan records exit.
+
+        </div>
+
+      </div>
+
+
+      <div class="modal-footer">
+
+
+        <button type="button"
+                class="btn btn-secondary"
+                onclick="closeModal('preScheduledVisitorModal')">
+
+          Cancel
+
+        </button>
+
+
+        <button type="submit"
+                class="btn btn-primary"
+                id="btnCreatePreScheduledVisitor">
+
+          <svg viewBox="0 0 24 24">
+
+            <polyline points="20 6 9 17 4 12"/>
+
+          </svg>
+
+          Generate Digital Pass
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- QR CODE PREVIEW & SHARE MODAL -->
+<!-- ========================================================= -->
+<div class="modal-backdrop"
+     id="qrPreviewModal">
+
+
+  <div class="modal-dialog">
+
+
+    <div class="modal-header">
+
+
+      <div class="modal-title">
+
+        <svg width="20"
+             height="20"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="#0284c7"
+             stroke-width="2">
+
+          <rect x="3"
+                y="3"
+                width="7"
+                height="7"/>
+
+          <rect x="14"
+                y="3"
+                width="7"
+                height="7"/>
+
+          <rect x="14"
+                y="14"
+                width="7"
+                height="7"/>
+
+          <rect x="3"
+                y="14"
+                width="7"
+                height="7"/>
+
+        </svg>
+
+        Visitor Digital Access Pass
+
+      </div>
+
+
+      <button class="modal-close-btn"
+              onclick="closeModal('qrPreviewModal')">
+
+        &times;
+
+      </button>
+
+    </div>
+
+
+    <div class="modal-body"
+         id="qrPreviewModalBody">
+
+      <!-- Populated dynamically by visitors.js -->
+
+    </div>
+
+
+    <div class="modal-footer">
+
+      <button type="button"
+              class="btn btn-secondary"
+              onclick="closeModal('qrPreviewModal')">
+
+        Close
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ==================== CORE SCRIPTS ==================== -->
+<script src="../js/app.js"></script>
+<script src="../js/visitors.js"></script>
+
+</body>
+</html>

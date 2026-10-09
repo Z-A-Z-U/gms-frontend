@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Companies - Gate Management System</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+  <!-- =========================================================
+       ADMIN SIDEBAR
+  ========================================================== -->
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+      <div class="brand-icon"
+           style="background:linear-gradient(135deg,#7c3aed,#4f46e5);">
+
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+
+      </div>
+
+      <div class="brand-text">
+
+        <div class="brand-title">
+
+          GMS ADMIN
+
+          <span class="brand-tag"
+                style="
+                  background:rgba(124,58,237,0.3);
+                  color:#c4b5fd;
+                  border-color:#8b5cf6;
+                ">
+
+            ADMIN
+
+          </span>
+
+        </div>
+
+        <div class="brand-subtitle">
+          Industrial Park Gate System
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =======================================================
+         NAVIGATION
+    ======================================================== -->
+    <nav class="sidebar-nav">
+
+      <div class="nav-section-title">
+        System Management
+      </div>
+
+
+      <!-- Dashboard -->
+      <div class="nav-item">
+
+        <a href="dashboard.html"
+           class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+
+          </svg>
+
+          <span>Dashboard</span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Security Officers -->
+      <div class="nav-item">
+
+        <a href="users.html"
+           class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="
+              M16 21v-2
+              a4 4 0 0 0-4-4H5
+              a4 4 0 0 0-4 4v2"/>
+
+            <circle cx="8.5"
+                    cy="7"
+                    r="4"/>
+
+            <polyline points="17 11 19 13 23 9"/>
+
+          </svg>
+
+          <span>Security Officers</span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Companies -->
+      <div class="nav-item">
+
+        <a href="companies.html"
+           class="nav-link active">
+
+          <svg viewBox="0 0 24 24">
+
+            <rect x="4"
+                  y="2"
+                  width="16"
+                  height="20"
+                  rx="2"/>
+
+            <line x1="9"
+                  y1="6"
+                  x2="9"
+                  y2="6.01"/>
+
+            <line x1="15"
+                  y1="6"
+                  x2="15"
+                  y2="6.01"/>
+
+            <line x1="9"
+                  y1="10"
+                  x2="9"
+                  y2="10.01"/>
+
+            <line x1="15"
+                  y1="10"
+                  x2="15"
+                  y2="10.01"/>
+
+          </svg>
+
+          <span>Companies</span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Settings -->
+      <div class="nav-item">
+
+        <a href="../pages/settings.html"
+           class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+
+            <circle cx="12"
+                    cy="12"
+                    r="3"/>
+
+            <path d="
+              M19.4 15
+              a1.65 1.65 0 0 0
+              .33 1.82
+              l.06.06
+              a2 2 0 0 1
+              0 2.83
+              2 2 0 0 1
+              -2.83 0
+              l-.06-.06
+              a1.65 1.65 0 0 0
+              -1.82-.33
+              1.65 1.65 0 0 0
+              -1 1.51
+              V21
+              a2 2 0 0 1
+              -2 2
+              2 2 0 0 1
+              -2-2
+              v-.09
+              A1.65 1.65 0 0 0
+              9 19.4
+              a1.65 1.65 0 0 0
+              -1.82.33
+              l-.06.06
+              a2 2 0 0 1
+              -2.83 0
+              2 2 0 0 1
+              0-2.83
+              l.06-.06
+              a1.65 1.65 0 0 0
+              .33-1.82
+              1.65 1.65 0 0 0
+              -1.51-1H3
+              a2 2 0 0 1
+              -2-2
+              2-2
+              h.09
+              A1.65 1.65 0 0 0
+              4.6 9
+              a1.65 1.65 0 0 0
+              -.33-1.82
+              l-.06-.06
+              a2 2 0 0 1
+              0-2.83
+              2 2 0 0 1
+              2.83 0
+              l.06.06
+              a1.65 1.65 0 0 0
+              1.82.33
+              H9
+              a1.65 1.65 0 0 0
+              1-1.51
+              V3
+              a2 2 0 0 1
+              2-2
+              2 2 0 0 1
+              2 2
+              v.09
+              a1.65 1.65 0 0 0
+              1 1.51
+              1.65 1.65 0 0 0
+              1.82-.33
+              l.06-.06
+              a2 2 0 0 1
+              2.83 0
+              2 2 0 0 1
+              0 2.83
+              l-.06.06
+              a1.65 1.65 0 0 0
+              -.33 1.82
+              V9
+              a1.65 1.65 0 0 0
+              1.51 1H21
+              a2 2 0 0 1
+              2 2
+              2 2
+              -2 2
+              h-.09
+              a1.65 1.65 0 0 0
+              -1.51 1z"/>
+
+          </svg>
+
+          <span>Settings</span>
+
+        </a>
+
+      </div>
+
+
+      <div class="nav-section-title">
+        System & Audit
+      </div>
+
+
+      <!-- System Logs -->
+      <div class="nav-item">
+
+        <a href="../pages/access-logs.html"
+           class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="
+              M14 2H6
+              a2 2 0 0 0-2 2v16
+              a2 2 0 0 0 2 2h12
+              a2 2 0 0 0 2-2V8z"/>
+
+            <polyline points="14 2 14 8 20 8"/>
+
+            <line x1="16"
+                  y1="13"
+                  x2="8"
+                  y2="13"/>
+
+            <line x1="16"
+                  y1="17"
+                  x2="8"
+                  y2="17"/>
+
+          </svg>
+
+          <span>System Logs</span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Reports -->
+      <div class="nav-item">
+
+        <a href="../pages/reports.html"
+           class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+
+            <line x1="18"
+                  y1="20"
+                  x2="18"
+                  y2="10"/>
+
+            <line x1="12"
+                  y1="20"
+                  x2="12"
+                  y2="4"/>
+
+            <line x1="6"
+                  y1="20"
+                  x2="6"
+                  y2="14"/>
+
+          </svg>
+
+          <span>Reports</span>
+
+        </a>
+
+      </div>
+
+    </nav>
+
+
+    <!-- =======================================================
+         ADMIN USER
+    ======================================================== -->
+    <div class="sidebar-footer">
+
+      <div class="user-profile-widget">
+
+        <div class="user-avatar"
+             style="
+               background:#4f46e5;
+               color:#fff;
+             ">
+
+          AD
+
+        </div>
+
+
+        <div class="user-details">
+
+          <div class="user-name">
+            System Administrator
+          </div>
+
+          <div class="user-role"
+               style="color:#a855f7;">
+
+            <span class="user-role-dot"
+                  style="
+                    background:#a855f7;
+                    box-shadow:0 0 6px #a855f7;
+                  ">
+            </span>
+
+            System Admin
+
+          </div>
+
+        </div>
+
+
+        <a href="../index.html"
+           class="btn-logout"
+           title="Logout">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="
+              M9 21H5
+              a2 2 0 0 1-2-2V5
+              a2 2 0 0 1 2-2h4"/>
+
+            <polyline points="16 17 21 12 16 7"/>
+
+            <line x1="21"
+                  y1="12"
+                  x2="9"
+                  y2="12"/>
+
+          </svg>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =========================================================
+       MAIN CONTENT
+  ========================================================== -->
+  <main class="main-wrapper">
+
+
+    <!-- TOP HEADER -->
+    <header class="top-header">
+
+      <div class="header-left">
+
+        <button class="btn-sidebar-toggle"
+                id="btnSidebarToggle">
+
+          <svg width="22"
+               height="22"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2">
+
+            <line x1="3"
+                  y1="12"
+                  x2="21"
+                  y2="12"/>
+
+            <line x1="3"
+                  y1="6"
+                  x2="21"
+                  y2="6"/>
+
+            <line x1="3"
+                  y1="18"
+                  x2="21"
+                  y2="18"/>
+
+          </svg>
+
+        </button>
+
+
+        <div class="header-title-group">
+
+          <h1>
+            Company Management
+          </h1>
+
+          <div class="header-breadcrumb">
+
+            System Management
+            <span>/</span>
+            Companies
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="header-right">
+
+
+        <!-- STATIC ROLE -->
+        <div style="
+          display:flex;
+          align-items:center;
+          gap:8px;
+        ">
+
+          <span style="
+            color:#64748b;
+            font-weight:500;
+          ">
+            Role:
+          </span>
+
+          <strong style="
+            color:#0f172a;
+          ">
+            System Admin
+          </strong>
+
+        </div>
+
+
+        <!-- CLOCK -->
+        <div class="live-clock-widget"
+             id="liveSystemClock">
+
+          --:--:-- EAT
+
+        </div>
+
+
+        <!-- NOTIFICATIONS -->
+        <button class="icon-btn"
+                id="btnNotificationBell">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="
+              M18 8
+              A6 6 0 0 0 6 8
+              c0 7-3 9-3 9h18
+              s-3-2-3-9"/>
+
+            <path d="
+              M13.73 21
+              a2 2 0 0 1-3.46 0"/>
+
+          </svg>
+
+          <span class="icon-btn-badge">
+            2
+          </span>
+
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- =======================================================
+         CONTENT
+    ======================================================== -->
+    <div class="content-body">
+
+
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+
+        <div class="page-title-desc">
+
+          <h2>
+            Company Directory
+          </h2>
+
+          <p>
+            Manage company records used for vehicle
+            registration, visitor registration, logistics,
+            and gate access records.
+          </p>
+
+        </div>
+
+
+        <div class="page-actions">
+
+          <button class="btn btn-primary"
+                  onclick="openModal('addCompanyModal')">
+
+            <svg viewBox="0 0 24 24">
+
+              <line x1="12"
+                    y1="5"
+                    x2="12"
+                    y2="19"/>
+
+              <line x1="5"
+                    y1="12"
+                    x2="19"
+                    y2="12"/>
+
+            </svg>
+
+            Add New Company
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           SUMMARY CARDS
+      ====================================================== -->
+      <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon"
+               style="
+                 background:#ede9fe;
+                 color:#7c3aed;
+               ">
+
+            <svg viewBox="0 0 24 24">
+
+              <rect x="4"
+                    y="2"
+                    width="16"
+                    height="20"
+                    rx="2"/>
+
+              <line x1="9"
+                    y1="6"
+                    x2="9"
+                    y2="6.01"/>
+
+              <line x1="15"
+                    y1="6"
+                    x2="15"
+                    y2="6.01"/>
+
+            </svg>
+
+          </div>
+
+
+          <div class="stat-info">
+
+            <div class="stat-value"
+                 id="totalCompaniesCount">
+
+              —
+
+            </div>
+
+            <div class="stat-label">
+              Total Companies
+            </div>
+
+            <div class="stat-meta">
+              Registered records
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon"
+               style="
+                 background:#d1fae5;
+                 color:#059669;
+               ">
+
+            <svg viewBox="0 0 24 24">
+
+              <path d="
+                M20 6L9 17l-5-5"/>
+
+            </svg>
+
+          </div>
+
+
+          <div class="stat-info">
+
+            <div class="stat-value"
+                 id="activeCompaniesCount">
+
+              —
+
+            </div>
+
+            <div class="stat-label">
+              Active Companies
+            </div>
+
+            <div class="stat-meta">
+              Currently active
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon"
+               style="
+                 background:#e0f2fe;
+                 color:#0284c7;
+               ">
+
+            <svg viewBox="0 0 24 24">
+
+              <path d="
+                M19 17h2
+                c.6 0 1-.4 1-1v-3
+                c0-.9-.7-1.7-1.5-1.9
+                C18.7 10.6 16 10 16 10
+                s-1.3-1.4-2.2-2.3
+                c-.5-.4-1.1-.7-1.8-.7H5
+                c-.6 0-1.1.4-1.4.9
+                l-1.5 2.8
+                c-.3.5-.1 1.2.4 1.5
+                .2.1.5.2.7.2H5v3
+                c0 .6.4 1 1 1h2"/>
+
+              <circle cx="7"
+                      cy="17"
+                      r="2"/>
+
+              <circle cx="17"
+                      cy="17"
+                      r="2"/>
+
+            </svg>
+
+          </div>
+
+
+          <div class="stat-info">
+
+            <div class="stat-value"
+                 id="totalRegisteredVehicles">
+
+              —
+
+            </div>
+
+            <div class="stat-label">
+              Registered Vehicles
+            </div>
+
+            <div class="stat-meta">
+              Across all companies
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon"
+               style="
+                 background:#fef3c7;
+                 color:#d97706;
+               ">
+
+            <svg viewBox="0 0 24 24">
+
+              <path d="
+                M17 21v-2
+                a4 4 0 0 0-4-4H5
+                a4 4 0 0 0-4 4v2"/>
+
+              <circle cx="9"
+                      cy="7"
+                      r="4"/>
+
+              <path d="
+                M23 21v-2
+                a4 4 0 0 0-3-3.87"/>
+
+              <path d="
+                M16 3.13
+                a4 4 0 0 1 0 7.75"/>
+
+            </svg>
+
+          </div>
+
+
+          <div class="stat-info">
+
+            <div class="stat-value"
+                 id="activeVisitorsCount">
+
+              —
+
+            </div>
+
+            <div class="stat-label">
+              Active Visitors
+            </div>
+
+            <div class="stat-meta">
+              Currently inside
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           COMPANY TABLE
+      ====================================================== -->
+      <div class="card"
+           style="margin-top:20px;">
+
+        <div class="card-header">
+
+          <div>
+
+            <div class="card-title">
+              Registered Companies
+            </div>
+
+            <div style="
+              color:#64748b;
+              font-size:0.8rem;
+              margin-top:4px;
+            ">
+
+              Company records referenced by
+              vehicles, visitors, and logistics.
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="table-container">
+
+          <table class="data-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Company Name & Location
+                </th>
+
+                <th>
+                  Industry Sector
+                </th>
+
+                <th>
+                  Contact Person
+                </th>
+
+                <th>
+                  Phone Number
+                </th>
+
+                <th>
+                  Official Email
+                </th>
+
+                <th>
+                  Registered Vehicles
+                </th>
+
+                <th>
+                  Active Visitors
+                </th>
+
+                <th>
+                  Status
+                </th>
+
+                <th>
+                  Actions
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody id="adminCompaniesTableBody">
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+
+      <!-- INFORMATION -->
+      <div class="card"
+           style="
+             margin-top:20px;
+             background:#f8fafc;
+           ">
+
+        <div class="card-body">
+
+          <strong>
+            Company Records
+          </strong>
+
+          <p style="
+            margin:8px 0 0;
+            color:#64748b;
+            font-size:0.85rem;
+            line-height:1.6;
+          ">
+
+            Companies are reference records in the GMS.
+            They are linked to registered vehicles,
+            visitors, and logistics records. A company
+            does not receive a separate GMS login from
+            this page.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+
+<!-- =========================================================
+     ADD COMPANY MODAL
+========================================================== -->
+<div class="modal-backdrop"
+     id="addCompanyModal">
+
+  <div class="modal-dialog">
+
+
+    <div class="modal-header">
+
+      <div class="modal-title">
+        Register Company
+      </div>
+
+      <button class="modal-close-btn"
+              onclick="closeModal('addCompanyModal')">
+
+        &times;
+
+      </button>
+
+    </div>
+
+
+    <form id="addCompanyForm">
+
+      <div class="modal-body">
+
+
+        <!-- COMPANY NAME + CATEGORY -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Company Name
+            </label>
+
+            <input type="text"
+                   id="companyName"
+                   class="form-input"
+                   placeholder="e.g. Addis Steel Manufacturing"
+                   required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Industry Sector
+            </label>
+
+            <input type="text"
+                   id="companyCategory"
+                   class="form-input"
+                   placeholder="e.g. Manufacturing"
+                   required>
+
+          </div>
+
+        </div>
+
+
+        <!-- CONTACT + PHONE -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Contact Person
+            </label>
+
+            <input type="text"
+                   id="companyContact"
+                   class="form-input"
+                   placeholder="e.g. Yared Haile"
+                   required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Phone Number
+            </label>
+
+            <input type="tel"
+                   id="companyPhone"
+                   class="form-input"
+                   placeholder="+251 91 222 3344"
+                   required>
+
+          </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="form-group">
+
+          <label class="form-label">
+            Official Email
+          </label>
+
+          <input type="email"
+                 id="companyEmail"
+                 class="form-input"
+                 placeholder="info@company.com">
+
+        </div>
+
+
+        <!-- LOCATION -->
+        <div class="form-group">
+
+          <label class="form-label required">
+            Building / Location
+          </label>
+
+          <input type="text"
+                 id="companyBuilding"
+                 class="form-input"
+                 placeholder="e.g. Building B, Zone 2"
+                 required>
+
+        </div>
+
+
+        <!-- STATUS -->
+        <div class="form-group">
+
+          <label class="form-label">
+            Company Status
+          </label>
+
+          <select id="companyStatus"
+                  class="form-select">
+
+            <option value="Active">
+              Active
+            </option>
+
+            <option value="Suspended">
+              Suspended
+            </option>
+
+          </select>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="modal-footer">
+
+        <button type="button"
+                class="btn btn-secondary"
+                onclick="closeModal('addCompanyModal')">
+
+          Cancel
+
+        </button>
+
+
+        <button type="submit"
+                class="btn btn-primary">
+
+          Register Company
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     VIEW COMPANY MODAL
+========================================================== -->
+<div class="modal-backdrop"
+     id="viewCompanyModal">
+
+  <div class="modal-dialog">
+
+
+    <div class="modal-header">
+
+      <div class="modal-title">
+        Company Profile
+      </div>
+
+      <button class="modal-close-btn"
+              onclick="closeModal('viewCompanyModal')">
+
+        &times;
+
+      </button>
+
+    </div>
+
+
+    <div class="modal-body"
+         id="viewCompanyDetailsBody">
+
+    </div>
+
+
+    <div class="modal-footer">
+
+      <button type="button"
+              class="btn btn-secondary"
+              onclick="closeModal('viewCompanyModal')">
+
+        Close
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================== -->
+<script src="../js/app.js"></script>
+
+
+<script>
+
+/* ============================================================
+   RENDER COMPANIES
+============================================================ */
+
+function renderAdminCompanies() {
+
+  const tbody =
+    document.getElementById(
+      "adminCompaniesTableBody"
+    );
+
+
+  if (!tbody) {
+    return;
+  }
+
+
+  tbody.innerHTML = "";
+
+
+  const companies =
+    GMS_STORE.companies || [];
+
+
+  companies.forEach(company => {
+
+    const row =
+      document.createElement("tr");
+
+
+    const statusClass =
+      company.status === "Active"
+        ? "badge-active"
+        : "badge-neutral";
+
+
+    row.innerHTML = `
+
+      <td>
+
+        <strong>
+          ${company.name}
+        </strong>
+
+        <div style="
+          font-size:0.75rem;
+          color:#64748b;
+          margin-top:3px;
+        ">
+
+          ${company.building || "—"}
+
+        </div>
+
+      </td>
+
+
+      <td>
+        ${company.category || "—"}
+      </td>
+
+
+      <td>
+        ${company.contactPerson || "—"}
+      </td>
+
+
+      <td>
+        ${company.phone || "—"}
+      </td>
+
+
+      <td>
+
+        ${company.email
+          ? `<a href="mailto:${company.email}">
+               ${company.email}
+             </a>`
+          : "—"}
+
+      </td>
+
+
+      <td>
+
+        <strong style="
+          font-family:ui-monospace,monospace;
+        ">
+
+          ${getCompanyVehicleCount(company.id)}
+
+        </strong>
+
+      </td>
+
+
+      <td>
+
+        <span class="badge ${
+          getCompanyActiveVisitorCount(company.id) > 0
+            ? "badge-inside"
+            : "badge-neutral"
+        }">
+
+          ${getCompanyActiveVisitorCount(company.id)}
+
+        </span>
+
+      </td>
+
+
+      <td>
+
+        <span class="badge ${statusClass}">
+
+          ${company.status || "Active"}
+
+        </span>
+
+      </td>
+
+
+      <td>
+
+        <div style="
+          display:flex;
+          gap:6px;
+          flex-wrap:wrap;
+        ">
+
+
+          <button
+            class="btn btn-sm btn-outline"
+            onclick="viewCompany('${company.id}')">
+
+            View
+
+          </button>
+
+
+          <button
+            class="btn btn-sm btn-outline"
+            onclick="toggleCompanyStatus('${company.id}')">
+
+            ${
+              company.status === "Active"
+                ? "Suspend"
+                : "Activate"
+            }
+
+          </button>
+
+
+        </div>
+
+      </td>
+
+    `;
+
+
+    tbody.appendChild(row);
+
+  });
+
+
+  updateCompanyStats();
+
+}
+
+
+/* ============================================================
+   VEHICLE COUNT
+============================================================ */
+
+function getCompanyVehicleCount(companyId) {
+
+  if (
+    !GMS_STORE.vehicles ||
+    !companyId
+  ) {
+
+    return 0;
+
+  }
+
+
+  return GMS_STORE.vehicles.filter(
+    vehicle =>
+      vehicle.companyId === companyId ||
+      vehicle.company_id === companyId ||
+      vehicle.company === companyId
+  ).length;
+
+}
+
+
+/* ============================================================
+   ACTIVE VISITOR COUNT
+============================================================ */
+
+function getCompanyActiveVisitorCount(companyId) {
+
+  if (
+    !GMS_STORE.visitors ||
+    !companyId
+  ) {
+
+    return 0;
+
+  }
+
+
+  return GMS_STORE.visitors.filter(
+    visitor => {
+
+      const sameCompany =
+        visitor.companyId === companyId ||
+        visitor.company_id === companyId ||
+        visitor.company === companyId;
+
+
+      const inside =
+        visitor.status === "Inside" ||
+        visitor.status === "inside" ||
+        visitor.inside === true;
+
+
+      return sameCompany && inside;
+
+    }
+  ).length;
+
+}
+
+
+/* ============================================================
+   UPDATE STATISTICS
+============================================================ */
+
+function updateCompanyStats() {
+
+  const companies =
+    GMS_STORE.companies || [];
+
+
+  const total =
+    companies.length;
+
+
+  const active =
+    companies.filter(
+      company =>
+        company.status === "Active"
+    ).length;
+
+
+  let totalVehicles = 0;
+  let totalVisitors = 0;
+
+
+  companies.forEach(company => {
+
+    totalVehicles +=
+      getCompanyVehicleCount(
+        company.id
+      );
+
+
+    totalVisitors +=
+      getCompanyActiveVisitorCount(
+        company.id
+      );
+
+  });
+
+
+  const totalElement =
+    document.getElementById(
+      "totalCompaniesCount"
+    );
+
+
+  const activeElement =
+    document.getElementById(
+      "activeCompaniesCount"
+    );
+
+
+  const vehiclesElement =
+    document.getElementById(
+      "totalRegisteredVehicles"
+    );
+
+
+  const visitorsElement =
+    document.getElementById(
+      "activeVisitorsCount"
+    );
+
+
+  if (totalElement) {
+    totalElement.textContent =
+      total;
+  }
+
+
+  if (activeElement) {
+    activeElement.textContent =
+      active;
+  }
+
+
+  if (vehiclesElement) {
+    vehiclesElement.textContent =
+      totalVehicles;
+  }
+
+
+  if (visitorsElement) {
+    visitorsElement.textContent =
+      totalVisitors;
+  }
+
+}
+
+
+/* ============================================================
+   VIEW COMPANY
+============================================================ */
+
+function viewCompany(companyId) {
+
+  const company =
+    GMS_STORE.companies.find(
+      item => item.id === companyId
+    );
+
+
+  if (!company) {
+    return;
+  }
+
+
+  const vehicleCount =
+    getCompanyVehicleCount(
+      company.id
+    );
+
+
+  const visitorCount =
+    getCompanyActiveVisitorCount(
+      company.id
+    );
+
+
+  const body =
+    document.getElementById(
+      "viewCompanyDetailsBody"
+    );
+
+
+  body.innerHTML = `
+
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+    ">
+
+
+      <div>
+
+        <div style="
+          color:#64748b;
+          font-size:0.75rem;
+          margin-bottom:4px;
+        ">
+
+          Company Name
+
+        </div>
+
+        <strong>
+          ${company.name}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <div style="
+          color:#64748b;
+          font-size:0.75rem;
+          margin-bottom:4px;
+        ">
+
+          Industry Sector
+
+        </div>
+
+        <strong>
+          ${company.category || "—"}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <div style="
+          color:#64748b;
+          font-size:0.75rem;
+          margin-bottom:4px;
+        ">
+
+          Building / Location
+
+        </div>
+
+        <strong>
+          ${company.building || "—"}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <div style="
+          color:#64748b;
+          font-size:0.75rem;
+          margin-bottom:4px;
+        ">
+
+          Contact Person
+
+        </div>
+
+        <strong>
+          ${company.contactPerson || "—"}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <div style="
+          color:#64748b;
+          font-size:0.75rem;
+          margin-bottom:4px;
+        ">
+
+          Phone
+
+        </div>
+
+        <strong>
+          ${company.phone || "—"}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <div style="
+          color:#64748b;
+          font-size:0.75rem;
+          margin-bottom:4px;
+        ">
+
+          Official Email
+
+        </div>
+
+        <strong>
+          ${company.email || "—"}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <div style="
+          color:#64748b;
+          font-size:0.75rem;
+          margin-bottom:4px;
+        ">
+
+          Registered Vehicles
+
+        </div>
+
+        <strong>
+          ${vehicleCount}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <div style="
+          color:#64748b;
+          font-size:0.75rem;
+          margin-bottom:4px;
+        ">
+
+          Active Visitors
+
+        </div>
+
+        <strong>
+          ${visitorCount}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <div style="
+          color:#64748b;
+          font-size:0.75rem;
+          margin-bottom:4px;
+        ">
+
+          Status
+
+        </div>
+
+        <span class="badge ${
+          company.status === "Active"
+            ? "badge-active"
+            : "badge-neutral"
+        }">
+
+          ${company.status || "Active"}
+
+        </span>
+
+      </div>
+
+
+    </div>
+
+  `;
+
+
+  openModal(
+    "viewCompanyModal"
+  );
+
+}
+
+
+/* ============================================================
+   ACTIVATE / SUSPEND COMPANY
+============================================================ */
+
+function toggleCompanyStatus(companyId) {
+
+  const company =
+    GMS_STORE.companies.find(
+      item => item.id === companyId
+    );
+
+
+  if (!company) {
+    return;
+  }
+
+
+  const newStatus =
+    company.status === "Active"
+      ? "Suspended"
+      : "Active";
+
+
+  const action =
+    newStatus === "Suspended"
+      ? "suspend"
+      : "activate";
+
+
+  const confirmed =
+    confirm(
+      `Are you sure you want to ${action} ${company.name}?`
+    );
+
+
+  if (!confirmed) {
+    return;
+  }
+
+
+  company.status =
+    newStatus;
+
+
+  saveStore(
+    GMS_STORE
+  );
+
+
+  renderAdminCompanies();
+
+
+  showToast(
+    "Company Status Updated",
+    `${company.name} is now ${newStatus}.`,
+    "info"
+  );
+
+}
+
+
+/* ============================================================
+   ADD COMPANY
+============================================================ */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function() {
+
+    renderAdminCompanies();
+
+
+    const form =
+      document.getElementById(
+        "addCompanyForm"
+      );
+
+
+    if (!form) {
+      return;
+    }
+
+
+    form.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+          document.getElementById(
+            "companyName"
+          ).value.trim();
+
+
+        const duplicate =
+          GMS_STORE.companies.some(
+            company =>
+              company.name.toLowerCase() ===
+              name.toLowerCase()
+          );
+
+
+        if (duplicate) {
+
+          showToast(
+            "Company Already Exists",
+            "A company with this name is already registered.",
+            "error"
+          );
+
+          return;
+
+        }
+
+
+        const newCompany = {
+
+          id:
+            "COMP-" +
+            String(
+              GMS_STORE.companies.length + 1
+            ).padStart(3, "0"),
+
+
+          name: name,
+
+
+          category:
+            document.getElementById(
+              "companyCategory"
+            ).value.trim(),
+
+
+          contactPerson:
+            document.getElementById(
+              "companyContact"
+            ).value.trim(),
+
+
+          phone:
+            document.getElementById(
+              "companyPhone"
+            ).value.trim(),
+
+
+          email:
+            document.getElementById(
+              "companyEmail"
+            ).value.trim(),
+
+
+          building:
+            document.getElementById(
+              "companyBuilding"
+            ).value.trim(),
+
+
+          vehicleCount: 0,
+
+
+          activeVisitors: 0,
+
+
+          status:
+            document.getElementById(
+              "companyStatus"
+            ).value
+
+        };
+
+
+        GMS_STORE.companies.push(
+          newCompany
+        );
+
+
+        saveStore(
+          GMS_STORE
+        );
+
+
+        closeModal(
+          "addCompanyModal"
+        );
+
+
+        form.reset();
+
+
+        renderAdminCompanies();
+
+
+        showToast(
+          "Company Registered",
+          `${newCompany.name} has been added to the company directory.`,
+          "success"
+        );
+
+      }
+    );
+
+  });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Security Officers - Gate Management System</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+  <!-- =========================================================
+       ADMIN SIDEBAR
+  ========================================================== -->
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+      <div class="brand-icon"
+           style="background:linear-gradient(135deg,#7c3aed,#4f46e5);">
+
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+
+      </div>
+
+      <div class="brand-text">
+
+        <div class="brand-title">
+
+          GMS ADMIN
+
+          <span class="brand-tag"
+                style="
+                  background:rgba(124,58,237,0.3);
+                  color:#c4b5fd;
+                  border-color:#8b5cf6;
+                ">
+
+            ADMIN
+
+          </span>
+
+        </div>
+
+        <div class="brand-subtitle">
+          Industrial Park Gate System
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =======================================================
+         NAVIGATION
+    ======================================================== -->
+    <nav class="sidebar-nav">
+
+      <div class="nav-section-title">
+        System Management
+      </div>
+
+
+      <!-- Dashboard -->
+      <div class="nav-item">
+
+        <a href="dashboard.html"
+           class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+
+          <span>Dashboard</span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Security Officers -->
+      <div class="nav-item">
+
+        <a href="users.html"
+           class="nav-link active">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="
+              M16 21v-2
+              a4 4 0 0 0-4-4H5
+              a4 4 0 0 0-4 4v2"/>
+
+            <circle cx="8.5"
+                    cy="7"
+                    r="4"/>
+
+            <polyline points="17 11 19 13 23 9"/>
+
+          </svg>
+
+          <span>Security Officers</span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Settings -->
+      <div class="nav-item">
+
+        <a href="../pages/settings.html"
+           class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+
+            <circle cx="12"
+                    cy="12"
+                    r="3"/>
+
+            <path d="
+              M19.4 15
+              a1.65 1.65 0 0 0
+              .33 1.82
+              l.06.06
+              a2 2 0 0 1
+              0 2.83
+              2 2 0 0 1
+              -2.83 0
+              l-.06-.06
+              a1.65 1.65 0 0 0
+              -1.82-.33
+              1.65 1.65 0 0 0
+              -1 1.51
+              V21
+              a2 2 0 0 1
+              -2 2
+              2 2 0 0 1
+              -2-2
+              v-.09
+              A1.65 1.65 0 0 0
+              9 19.4
+              a1.65 1.65 0 0 0
+              -1.82.33
+              l-.06.06
+              a2 2 0 0 1
+              -2.83 0
+              2 2 0 0 1
+              0-2.83
+              l.06-.06
+              a1.65 1.65 0 0 0
+              .33-1.82
+              1.65 1.65 0 0 0
+              -1.51-1H3
+              a2 2 0 0 1
+              -2-2
+              2-2
+              h.09
+              A1.65 1.65 0 0 0
+              4.6 9
+              a1.65 1.65 0 0 0
+              -.33-1.82
+              l-.06-.06
+              a2 2 0 0 1
+              0-2.83
+              2 2 0 0 1
+              2.83 0
+              l.06.06
+              a1.65 1.65 0 0 0
+              1.82.33
+              H9
+              a1.65 1.65 0 0 0
+              1-1.51
+              V3
+              a2 2 0 0 1
+              2-2
+              2 2 0 0 1
+              2 2
+              v.09
+              a1.65 1.65 0 0 0
+              1 1.51
+              1.65 1.65 0 0 0
+              1.82-.33
+              l.06-.06
+              a2 2 0 0 1
+              2.83 0
+              2 2 0 0 1
+              0 2.83
+              l-.06.06
+              a1.65 1.65 0 0 0
+              -.33 1.82
+              V9
+              a1.65 1.65 0 0 0
+              1.51 1H21
+              a2 2 0 0 1
+              2 2
+              2 2
+              -2 2
+              h-.09
+              a1.65 1.65 0 0 0
+              -1.51 1z"/>
+
+          </svg>
+
+          <span>Settings</span>
+
+        </a>
+
+      </div>
+
+
+      <div class="nav-section-title">
+        System & Audit
+      </div>
+
+
+      <!-- Companies -->
+      <div class="nav-item">
+
+        <a href="companies.html"
+           class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+
+            <rect x="4"
+                  y="2"
+                  width="16"
+                  height="20"
+                  rx="2"/>
+
+            <line x1="9"
+                  y1="6"
+                  x2="9"
+                  y2="6.01"/>
+
+            <line x1="15"
+                  y1="6"
+                  x2="15"
+                  y2="6.01"/>
+
+            <line x1="9"
+                  y1="10"
+                  x2="9"
+                  y2="10.01"/>
+
+            <line x1="15"
+                  y1="10"
+                  x2="15"
+                  y2="10.01"/>
+
+          </svg>
+
+          <span>Companies</span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Access Logs -->
+      <div class="nav-item">
+
+        <a href="../pages/access-logs.html"
+           class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="
+              M14 2H6
+              a2 2 0 0 0-2 2v16
+              a2 2 0 0 0 2 2h12
+              a2 2 0 0 0 2-2V8z"/>
+
+            <polyline points="14 2 14 8 20 8"/>
+
+            <line x1="16"
+                  y1="13"
+                  x2="8"
+                  y2="13"/>
+
+            <line x1="16"
+                  y1="17"
+                  x2="8"
+                  y2="17"/>
+
+          </svg>
+
+          <span>System Logs</span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Reports -->
+      <div class="nav-item">
+
+        <a href="../pages/reports.html"
+           class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+
+            <line x1="18"
+                  y1="20"
+                  x2="18"
+                  y2="10"/>
+
+            <line x1="12"
+                  y1="20"
+                  x2="12"
+                  y2="4"/>
+
+            <line x1="6"
+                  y1="20"
+                  x2="6"
+                  y2="14"/>
+
+          </svg>
+
+          <span>Reports</span>
+
+        </a>
+
+      </div>
+
+    </nav>
+
+
+    <!-- =======================================================
+         SIDEBAR USER
+    ======================================================== -->
+    <div class="sidebar-footer">
+
+      <div class="user-profile-widget">
+
+        <div class="user-avatar"
+             style="
+               background:#4f46e5;
+               color:#fff;
+             ">
+          AD
+        </div>
+
+        <div class="user-details">
+
+          <div class="user-name">
+            System Administrator
+          </div>
+
+          <div class="user-role"
+               style="color:#a855f7;">
+
+            <span class="user-role-dot"
+                  style="
+                    background:#a855f7;
+                    box-shadow:0 0 6px #a855f7;
+                  ">
+            </span>
+
+            System Admin
+
+          </div>
+
+        </div>
+
+        <a href="../index.html"
+           class="btn-logout"
+           title="Logout">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="
+              M9 21H5
+              a2 2 0 0 1-2-2V5
+              a2 2 0 0 1 2-2h4"/>
+
+            <polyline points="16 17 21 12 16 7"/>
+
+            <line x1="21"
+                  y1="12"
+                  x2="9"
+                  y2="12"/>
+
+          </svg>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =========================================================
+       MAIN CONTENT
+  ========================================================== -->
+  <main class="main-wrapper">
+
+
+    <!-- TOP HEADER -->
+    <header class="top-header">
+
+      <div class="header-left">
+
+        <button class="btn-sidebar-toggle"
+                id="btnSidebarToggle">
+
+          <svg width="22"
+               height="22"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2">
+
+            <line x1="3"
+                  y1="12"
+                  x2="21"
+                  y2="12"/>
+
+            <line x1="3"
+                  y1="6"
+                  x2="21"
+                  y2="6"/>
+
+            <line x1="3"
+                  y1="18"
+                  x2="21"
+                  y2="18"/>
+
+          </svg>
+
+        </button>
+
+
+        <div class="header-title-group">
+
+          <h1>
+            Security Officer Management
+          </h1>
+
+          <div class="header-breadcrumb">
+
+            System Management
+            <span>/</span>
+            Security Officers
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="header-right">
+
+
+        <!-- Static role -->
+        <div style="
+          display:flex;
+          align-items:center;
+          gap:8px;
+        ">
+
+          <span style="
+            color:#64748b;
+            font-weight:500;
+          ">
+            Role:
+          </span>
+
+          <strong style="
+            color:#0f172a;
+          ">
+            System Admin
+          </strong>
+
+        </div>
+
+
+        <!-- Clock -->
+        <div class="live-clock-widget"
+             id="liveSystemClock">
+
+          --:--:-- EAT
+
+        </div>
+
+
+        <!-- Notifications -->
+        <button class="icon-btn"
+                id="btnNotificationBell">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="
+              M18 8
+              A6 6 0 0 0 6 8
+              c0 7-3 9-3 9h18
+              s-3-2-3-9"/>
+
+            <path d="
+              M13.73 21
+              a2 2 0 0 1-3.46 0"/>
+
+          </svg>
+
+          <span class="icon-btn-badge">
+            2
+          </span>
+
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- =======================================================
+         CONTENT
+    ======================================================== -->
+    <div class="content-body">
+
+
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+
+        <div class="page-title-desc">
+
+          <h2>
+            Security Officers
+          </h2>
+
+          <p>
+            Create and manage security officer accounts,
+            assign gates and shifts, reset passwords,
+            and review officer activity.
+          </p>
+
+        </div>
+
+
+        <div class="page-actions">
+
+          <button class="btn btn-primary"
+                  onclick="openModal('addOfficerModal')">
+
+            <svg viewBox="0 0 24 24">
+
+              <line x1="12"
+                    y1="5"
+                    x2="12"
+                    y2="19"/>
+
+              <line x1="5"
+                    y1="12"
+                    x2="19"
+                    y2="12"/>
+
+            </svg>
+
+            Add Security Officer
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           SUMMARY
+      ====================================================== -->
+      <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon"
+               style="
+                 background:#ede9fe;
+                 color:#7c3aed;
+               ">
+
+            <svg viewBox="0 0 24 24">
+
+              <path d="
+                M16 21v-2
+                a4 4 0 0 0-4-4H5
+                a4 4 0 0 0-4 4v2"/>
+
+              <circle cx="8.5"
+                      cy="7"
+                      r="4"/>
+
+            </svg>
+
+          </div>
+
+          <div class="stat-info">
+
+            <div class="stat-value"
+                 id="activeOfficerCount">
+              —
+            </div>
+
+            <div class="stat-label">
+              Active Accounts
+            </div>
+
+            <div class="stat-meta">
+              Security officers
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon"
+               style="
+                 background:#d1fae5;
+                 color:#059669;
+               ">
+
+            <svg viewBox="0 0 24 24">
+
+              <circle cx="12"
+                      cy="12"
+                      r="10"/>
+
+              <polyline points="
+                12 6
+                12 12
+                16 14"/>
+
+            </svg>
+
+          </div>
+
+          <div class="stat-info">
+
+            <div class="stat-value"
+                 id="onDutyOfficerCount">
+              —
+            </div>
+
+            <div class="stat-label">
+              On Duty Today
+            </div>
+
+            <div class="stat-meta">
+              Current shift assignments
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon"
+               style="
+                 background:#e0f2fe;
+                 color:#0284c7;
+               ">
+
+            <svg viewBox="0 0 24 24">
+
+              <rect x="3"
+                    y="4"
+                    width="18"
+                    height="16"
+                    rx="2"/>
+
+              <line x1="8"
+                    y1="4"
+                    x2="8"
+                    y2="20"/>
+
+            </svg>
+
+          </div>
+
+          <div class="stat-info">
+
+            <div class="stat-value">
+              1
+            </div>
+
+            <div class="stat-label">
+              Entry Gate
+            </div>
+
+            <div class="stat-meta">
+              Gate assignment
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon"
+               style="
+                 background:#fef3c7;
+                 color:#d97706;
+               ">
+
+            <svg viewBox="0 0 24 24">
+
+              <rect x="3"
+                    y="4"
+                    width="18"
+                    height="16"
+                    rx="2"/>
+
+              <line x1="16"
+                    y1="4"
+                    x2="16"
+                    y2="20"/>
+
+            </svg>
+
+          </div>
+
+          <div class="stat-info">
+
+            <div class="stat-value">
+              1
+            </div>
+
+            <div class="stat-label">
+              Exit Gate
+            </div>
+
+            <div class="stat-meta">
+              Gate assignment
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           OFFICERS TABLE
+      ====================================================== -->
+      <div class="card"
+           style="margin-top:20px;">
+
+        <div class="card-header">
+
+          <div>
+
+            <div class="card-title">
+              Security Officer Accounts
+            </div>
+
+            <div style="
+              font-size:0.8rem;
+              color:#64748b;
+              margin-top:4px;
+            ">
+
+              Account access, gate assignment,
+              shift schedule, and duty status.
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="table-container">
+
+          <table class="data-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Officer
+                </th>
+
+                <th>
+                  Badge #
+                </th>
+
+                <th>
+                  Assigned Gate
+                </th>
+
+                <th>
+                  Shift
+                </th>
+
+                <th>
+                  Phone
+                </th>
+
+                <th>
+                  Duty Status
+                </th>
+
+                <th>
+                  Account
+                </th>
+
+                <th>
+                  Actions
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody id="securityOfficersTableBody">
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+
+      <!-- INFORMATION -->
+      <div class="card"
+           style="
+             margin-top:20px;
+             background:#f8fafc;
+           ">
+
+        <div class="card-body">
+
+          <strong>
+            Officer Management
+          </strong>
+
+          <p style="
+            margin:8px 0 0;
+            color:#64748b;
+            font-size:0.85rem;
+            line-height:1.6;
+          ">
+
+            The System Admin manages officer accounts
+            and assigns officers to the Entry Gate or Exit Gate
+            with a scheduled shift. Daily gate operations remain
+            the responsibility of the Security Officer.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+
+<!-- =========================================================
+     ADD OFFICER MODAL
+========================================================== -->
+<div class="modal-backdrop"
+     id="addOfficerModal">
+
+  <div class="modal-dialog">
+
+
+    <div class="modal-header">
+
+      <div class="modal-title">
+        Add Security Officer
+      </div>
+
+      <button class="modal-close-btn"
+              onclick="closeModal('addOfficerModal')">
+
+        &times;
+
+      </button>
+
+    </div>
+
+
+    <form id="addOfficerForm">
+
+      <div class="modal-body">
+
+
+        <!-- NAME + BADGE -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Officer Full Name
+            </label>
+
+            <input type="text"
+                   id="offName"
+                   class="form-input"
+                   placeholder="e.g. Mulugeta Desta"
+                   required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Badge Number
+            </label>
+
+            <input type="text"
+                   id="offBadge"
+                   class="form-input"
+                   placeholder="SEC-886"
+                   required>
+
+          </div>
+
+        </div>
+
+
+        <!-- PHONE + EMAIL -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Contact Phone
+            </label>
+
+            <input type="tel"
+                   id="offPhone"
+                   class="form-input"
+                   placeholder="+251 91 333 4455"
+                   required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Email Address
+            </label>
+
+            <input type="email"
+                   id="offEmail"
+                   class="form-input"
+                   placeholder="officer@example.com">
+
+          </div>
+
+        </div>
+
+
+        <!-- USERNAME -->
+        <div class="form-group">
+
+          <label class="form-label required">
+            Username
+          </label>
+
+          <input type="text"
+                 id="offUsername"
+                 class="form-input"
+                 placeholder="e.g. mulugeta.desta"
+                 required>
+
+        </div>
+
+
+        <!-- PASSWORD -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Initial Password
+            </label>
+
+            <input type="password"
+                   id="offPassword"
+                   class="form-input"
+                   required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Confirm Password
+            </label>
+
+            <input type="password"
+                   id="offPasswordConfirm"
+                   class="form-input"
+                   required>
+
+          </div>
+
+        </div>
+
+
+        <!-- GATE + SHIFT -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Assigned Gate
+            </label>
+
+            <select id="offGate"
+                    class="form-select">
+
+              <option value="Not Assigned">
+                Not Assigned
+              </option>
+
+              <option value="Entry Gate">
+                Entry Gate
+              </option>
+
+              <option value="Exit Gate">
+                Exit Gate
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Assigned Shift
+            </label>
+
+            <select id="offShift"
+                    class="form-select">
+
+              <option value="Not Assigned">
+                Not Assigned
+              </option>
+
+              <option value="06:00 - 14:00">
+                Day Shift (06:00 - 14:00)
+              </option>
+
+              <option value="14:00 - 22:00">
+                Evening Shift (14:00 - 22:00)
+              </option>
+
+              <option value="22:00 - 06:00">
+                Night Shift (22:00 - 06:00)
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <div style="
+          margin-top:8px;
+          padding:10px;
+          background:#fff7ed;
+          border:1px solid #fed7aa;
+          border-radius:6px;
+          font-size:0.78rem;
+          color:#9a3412;
+        ">
+
+          Passwords will be securely handled by the
+          PHP backend. They must never be stored as plain text.
+
+        </div>
+
+
+      </div>
+
+
+      <div class="modal-footer">
+
+        <button type="button"
+                class="btn btn-secondary"
+                onclick="closeModal('addOfficerModal')">
+
+          Cancel
+
+        </button>
+
+
+        <button type="submit"
+                class="btn btn-primary">
+
+          Create Officer Account
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     EDIT OFFICER MODAL
+========================================================== -->
+<div class="modal-backdrop"
+     id="editOfficerModal">
+
+  <div class="modal-dialog">
+
+
+    <div class="modal-header">
+
+      <div class="modal-title">
+        Edit Security Officer
+      </div>
+
+      <button class="modal-close-btn"
+              onclick="closeModal('editOfficerModal')">
+
+        &times;
+
+      </button>
+
+    </div>
+
+
+    <form id="editOfficerForm">
+
+      <div class="modal-body">
+
+
+        <input type="hidden"
+               id="editOfficerId">
+
+
+        <!-- NAME + BADGE -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Officer Full Name
+            </label>
+
+            <input type="text"
+                   id="editOfficerName"
+                   class="form-input"
+                   required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Badge Number
+            </label>
+
+            <input type="text"
+                   id="editOfficerBadge"
+                   class="form-input"
+                   disabled>
+
+          </div>
+
+        </div>
+
+
+        <!-- PHONE + EMAIL -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Contact Phone
+            </label>
+
+            <input type="tel"
+                   id="editOfficerPhone"
+                   class="form-input"
+                   required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Email Address
+            </label>
+
+            <input type="email"
+                   id="editOfficerEmail"
+                   class="form-input">
+
+          </div>
+
+        </div>
+
+
+        <!-- GATE + SHIFT -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Assigned Gate
+            </label>
+
+            <select id="editOfficerGate"
+                    class="form-select">
+
+              <option value="Not Assigned">
+                Not Assigned
+              </option>
+
+              <option value="Entry Gate">
+                Entry Gate
+              </option>
+
+              <option value="Exit Gate">
+                Exit Gate
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Assigned Shift
+            </label>
+
+            <select id="editOfficerShift"
+                    class="form-select">
+
+              <option value="Not Assigned">
+                Not Assigned
+              </option>
+
+              <option value="06:00 - 14:00">
+                Day Shift (06:00 - 14:00)
+              </option>
+
+              <option value="14:00 - 22:00">
+                Evening Shift (14:00 - 22:00)
+              </option>
+
+              <option value="22:00 - 06:00">
+                Night Shift (22:00 - 06:00)
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <!-- ACCOUNT STATUS -->
+        <div class="form-group">
+
+          <label class="form-label">
+            Account Status
+          </label>
+
+          <select id="editOfficerStatus"
+                  class="form-select">
+
+            <option value="Active">
+              Active
+            </option>
+
+            <option value="Inactive">
+              Inactive
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <div class="modal-footer">
+
+        <button type="button"
+                class="btn btn-secondary"
+                onclick="closeModal('editOfficerModal')">
+
+          Cancel
+
+        </button>
+
+
+        <button type="submit"
+                class="btn btn-primary">
+
+          Save Changes
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     RESET PASSWORD MODAL
+========================================================== -->
+<div class="modal-backdrop"
+     id="resetPasswordModal">
+
+  <div class="modal-dialog">
+
+
+    <div class="modal-header">
+
+      <div class="modal-title">
+        Reset Officer Password
+      </div>
+
+      <button class="modal-close-btn"
+              onclick="closeModal('resetPasswordModal')">
+
+        &times;
+
+      </button>
+
+    </div>
+
+
+    <form id="resetPasswordForm">
+
+      <div class="modal-body">
+
+
+        <input type="hidden"
+               id="resetOfficerId">
+
+
+        <p style="
+          color:#64748b;
+          font-size:0.85rem;
+          line-height:1.5;
+        ">
+
+          Set a new temporary password for this
+          security officer.
+
+        </p>
+
+
+        <div class="form-group">
+
+          <label class="form-label required">
+            New Temporary Password
+          </label>
+
+          <input type="password"
+                 id="resetPassword"
+                 class="form-input"
+                 required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label class="form-label required">
+            Confirm Password
+          </label>
+
+          <input type="password"
+                 id="resetPasswordConfirm"
+                 class="form-input"
+                 required>
+
+        </div>
+
+      </div>
+
+
+      <div class="modal-footer">
+
+        <button type="button"
+                class="btn btn-secondary"
+                onclick="closeModal('resetPasswordModal')">
+
+          Cancel
+
+        </button>
+
+
+        <button type="submit"
+                class="btn btn-primary">
+
+          Reset Password
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     OFFICER ACTIVITY MODAL
+========================================================== -->
+<div class="modal-backdrop"
+     id="officerActivityModal">
+
+  <div class="modal-dialog"
+       style="
+         width:min(950px,95vw);
+         max-height:90vh;
+         overflow:auto;
+       ">
+
+
+    <div class="modal-header">
+
+      <div>
+
+        <div class="modal-title">
+          Officer Activity
+        </div>
+
+        <div id="activityOfficerSubtitle"
+             style="
+               color:#64748b;
+               font-size:0.8rem;
+               margin-top:4px;
+             ">
+
+          Today's activity
+
+        </div>
+
+      </div>
+
+
+      <button class="modal-close-btn"
+              onclick="closeModal('officerActivityModal')">
+
+        &times;
+
+      </button>
+
+    </div>
+
+
+    <div class="modal-body">
+
+      <div class="table-container">
+
+        <table class="data-table">
+
+          <thead>
+
+            <tr>
+
+              <th>
+                Time
+              </th>
+
+              <th>
+                Event
+              </th>
+
+              <th>
+                Plate / Visitor
+              </th>
+
+              <th>
+                Gate
+              </th>
+
+              <th>
+                Method
+              </th>
+
+              <th>
+                Result
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody id="officerActivityTableBody">
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+
+    <div class="modal-footer">
+
+      <button type="button"
+              class="btn btn-secondary"
+              onclick="closeModal('officerActivityModal')">
+
+        Close
+
+      </button>
+
+
+      <a href="../pages/access-logs.html"
+         class="btn btn-primary">
+
+        Open Full Logs
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     CORE SCRIPT
+========================================================== -->
+<script src="../js/app.js"></script>
+
+
+<script>
+
+/* ============================================================
+   DEMO SECURITY OFFICERS
+============================================================ */
+
+let securityOfficersList = [
+
+  {
+    id: "SEC-882",
+    name: "Officer Tadesse Belay",
+    phone: "+251 91 112 3344",
+    email: "tadesse@example.com",
+    username: "tadesse.belay",
+
+    gate: "Entry Gate",
+    shift: "06:00 - 14:00",
+
+    dutyStatus: "ON DUTY",
+    accountStatus: "Active"
+  },
+
+
+  {
+    id: "SEC-883",
+    name: "Officer Girma Haile",
+    phone: "+251 92 223 4455",
+    email: "girma@example.com",
+    username: "girma.haile",
+
+    gate: "Exit Gate",
+    shift: "06:00 - 14:00",
+
+    dutyStatus: "ON DUTY",
+    accountStatus: "Active"
+  },
+
+
+  {
+    id: "SEC-884",
+    name: "Officer Yohannes Alemu",
+    phone: "+251 94 445 6677",
+    email: "yohannes@example.com",
+    username: "yohannes.alemu",
+
+    gate: "Entry Gate",
+    shift: "14:00 - 22:00",
+
+    dutyStatus: "UPCOMING",
+    accountStatus: "Active"
+  },
+
+
+  {
+    id: "SEC-885",
+    name: "Officer Aster Mengistu",
+    phone: "+251 93 334 5566",
+    email: "aster@example.com",
+    username: "aster.mengistu",
+
+    gate: "Exit Gate",
+    shift: "22:00 - 06:00",
+
+    dutyStatus: "OFF DUTY",
+    accountStatus: "Active"
+  }
+
+];
+
+
+/* ============================================================
+   DEMO ACTIVITY
+============================================================ */
+
+const officerActivities = {
+
+  "SEC-882": [
+
+    {
+      time: "08:12",
+      event: "ANPR Detection",
+      identifier: "ET-12345",
+      gate: "Entry Gate",
+      method: "ANPR",
+      result: "Authorized"
+    },
+
+    {
+      time: "08:35",
+      event: "Visitor Registration",
+      identifier: "Meron A.",
+      gate: "Entry Gate",
+      method: "Officer",
+      result: "QR Generated"
+    },
+
+    {
+      time: "09:04",
+      event: "QR Scan",
+      identifier: "Visitor QR",
+      gate: "Entry Gate",
+      method: "QR Reader",
+      result: "Entry Granted"
+    },
+
+    {
+      time: "10:21",
+      event: "ANPR Detection",
+      identifier: "ET-77821",
+      gate: "Entry Gate",
+      method: "ANPR",
+      result: "Denied"
+    }
+
+  ],
+
+
+  "SEC-883": [
+
+    {
+      time: "08:20",
+      event: "ANPR Detection",
+      identifier: "ET-45678",
+      gate: "Exit Gate",
+      method: "ANPR",
+      result: "Exit Granted"
+    },
+
+    {
+      time: "09:42",
+      event: "Item Clearance",
+      identifier: "GP-1024",
+      gate: "Exit Gate",
+      method: "Officer",
+      result: "Cleared"
+    },
+
+    {
+      time: "10:05",
+      event: "Vehicle Exit",
+      identifier: "ET-99121",
+      gate: "Exit Gate",
+      method: "ANPR",
+      result: "Exit Granted"
+    }
+
+  ],
+
+
+  "SEC-884": [],
+  "SEC-885": []
+
+};
+
+
+/* ============================================================
+   RENDER TABLE
+============================================================ */
+
+function renderOfficersTable() {
+
+  const tbody =
+    document.getElementById(
+      "securityOfficersTableBody"
+    );
+
+
+  if (!tbody) {
+    return;
+  }
+
+
+  tbody.innerHTML = "";
+
+
+  securityOfficersList.forEach(officer => {
+
+    const row =
+      document.createElement("tr");
+
+
+    const dutyClass =
+      officer.dutyStatus === "ON DUTY"
+        ? "badge-authorized"
+        : "badge-neutral";
+
+
+    const accountClass =
+      officer.accountStatus === "Active"
+        ? "badge-authorized"
+        : "badge-neutral";
+
+
+    row.innerHTML = `
+
+      <td>
+
+        <strong>
+          ${officer.name}
+        </strong>
+
+        <div style="
+          font-size:0.75rem;
+          color:#64748b;
+          margin-top:3px;
+        ">
+
+          ${officer.username}
+
+        </div>
+
+      </td>
+
+
+      <td>
+
+        <span style="
+          font-family:ui-monospace,monospace;
+          font-size:0.8rem;
+        ">
+
+          ${officer.id}
+
+        </span>
+
+      </td>
+
+
+      <td>
+
+        <strong>
+          ${officer.gate}
+        </strong>
+
+      </td>
+
+
+      <td>
+
+        <small>
+          ${officer.shift}
+        </small>
+
+      </td>
+
+
+      <td>
+        ${officer.phone}
+      </td>
+
+
+      <td>
+
+        <span class="badge ${dutyClass}">
+          ${officer.dutyStatus}
+        </span>
+
+      </td>
+
+
+      <td>
+
+        <span class="badge ${accountClass}">
+          ${officer.accountStatus}
+        </span>
+
+      </td>
+
+
+      <td>
+
+        <div style="
+          display:flex;
+          gap:6px;
+          flex-wrap:wrap;
+        ">
+
+          <button
+            class="btn btn-sm btn-outline"
+            onclick="viewOfficerActivity('${officer.id}')">
+
+            Activity
+
+          </button>
+
+
+          <button
+            class="btn btn-sm btn-outline"
+            onclick="editOfficer('${officer.id}')">
+
+            Edit
+
+          </button>
+
+
+          <button
+            class="btn btn-sm btn-outline"
+            onclick="resetOfficerPassword('${officer.id}')">
+
+            Reset Password
+
+          </button>
+
+
+          <button
+            class="btn btn-sm btn-outline"
+            onclick="toggleOfficerAccount('${officer.id}')">
+
+            ${officer.accountStatus === "Active"
+              ? "Deactivate"
+              : "Activate"}
+
+          </button>
+
+        </div>
+
+      </td>
+
+    `;
+
+
+    tbody.appendChild(row);
+
+  });
+
+
+  updateOfficerStats();
+
+}
+
+
+/* ============================================================
+   UPDATE STATISTICS
+============================================================ */
+
+function updateOfficerStats() {
+
+  const activeCount =
+    securityOfficersList.filter(
+      officer =>
+        officer.accountStatus === "Active"
+    ).length;
+
+
+  const onDutyCount =
+    securityOfficersList.filter(
+      officer =>
+        officer.accountStatus === "Active" &&
+        officer.dutyStatus === "ON DUTY"
+    ).length;
+
+
+  const activeElement =
+    document.getElementById(
+      "activeOfficerCount"
+    );
+
+
+  const dutyElement =
+    document.getElementById(
+      "onDutyOfficerCount"
+    );
+
+
+  if (activeElement) {
+    activeElement.textContent =
+      activeCount;
+  }
+
+
+  if (dutyElement) {
+    dutyElement.textContent =
+      onDutyCount;
+  }
+
+}
+
+
+/* ============================================================
+   EDIT OFFICER
+============================================================ */
+
+function editOfficer(id) {
+
+  const officer =
+    securityOfficersList.find(
+      item => item.id === id
+    );
+
+
+  if (!officer) {
+    return;
+  }
+
+
+  document.getElementById(
+    "editOfficerId"
+  ).value = officer.id;
+
+
+  document.getElementById(
+    "editOfficerName"
+  ).value = officer.name;
+
+
+  document.getElementById(
+    "editOfficerBadge"
+  ).value = officer.id;
+
+
+  document.getElementById(
+    "editOfficerPhone"
+  ).value = officer.phone;
+
+
+  document.getElementById(
+    "editOfficerEmail"
+  ).value = officer.email;
+
+
+  document.getElementById(
+    "editOfficerGate"
+  ).value = officer.gate;
+
+
+  document.getElementById(
+    "editOfficerShift"
+  ).value = officer.shift;
+
+
+  document.getElementById(
+    "editOfficerStatus"
+  ).value = officer.accountStatus;
+
+
+  openModal("editOfficerModal");
+
+}
+
+
+/* ============================================================
+   RESET PASSWORD
+============================================================ */
+
+function resetOfficerPassword(id) {
+
+  const officer =
+    securityOfficersList.find(
+      item => item.id === id
+    );
+
+
+  if (!officer) {
+    return;
+  }
+
+
+  document.getElementById(
+    "resetOfficerId"
+  ).value = officer.id;
+
+
+  document.getElementById(
+    "resetPassword"
+  ).value = "";
+
+
+  document.getElementById(
+    "resetPasswordConfirm"
+  ).value = "";
+
+
+  openModal("resetPasswordModal");
+
+}
+
+
+/* ============================================================
+   ACTIVATE / DEACTIVATE ACCOUNT
+============================================================ */
+
+function toggleOfficerAccount(id) {
+
+  const officer =
+    securityOfficersList.find(
+      item => item.id === id
+    );
+
+
+  if (!officer) {
+    return;
+  }
+
+
+  if (officer.accountStatus === "Active") {
+
+    const confirmed =
+      confirm(
+        `Deactivate ${officer.name}'s account?`
+      );
+
+
+    if (!confirmed) {
+      return;
+    }
+
+
+    officer.accountStatus =
+      "Inactive";
+
+    officer.dutyStatus =
+      "OFF DUTY";
+
+
+    showToast(
+      "Account Deactivated",
+      `${officer.name}'s account has been deactivated.`,
+      "info"
+    );
+
+  } else {
+
+    officer.accountStatus =
+      "Active";
+
+
+    showToast(
+      "Account Activated",
+      `${officer.name}'s account has been activated.`,
+      "success"
+    );
+
+  }
+
+
+  renderOfficersTable();
+
+}
+
+
+/* ============================================================
+   VIEW OFFICER ACTIVITY
+============================================================ */
+
+function viewOfficerActivity(id) {
+
+  const officer =
+    securityOfficersList.find(
+      item => item.id === id
+    );
+
+
+  if (!officer) {
+    return;
+  }
+
+
+  const subtitle =
+    document.getElementById(
+      "activityOfficerSubtitle"
+    );
+
+
+  const tbody =
+    document.getElementById(
+      "officerActivityTableBody"
+    );
+
+
+  const activities =
+    officerActivities[id] || [];
+
+
+  subtitle.textContent =
+    `${officer.name} (${officer.id}) • ${officer.gate} • ${officer.shift}`;
+
+
+  tbody.innerHTML = "";
+
+
+  if (activities.length === 0) {
+
+    tbody.innerHTML = `
+
+      <tr>
+
+        <td colspan="6"
+            style="
+              text-align:center;
+              padding:30px;
+              color:#64748b;
+            ">
+
+          No activity recorded for this officer today.
+
+        </td>
+
+      </tr>
+
+    `;
+
+  } else {
+
+    activities.forEach(activity => {
+
+      const row =
+        document.createElement("tr");
+
+
+      row.innerHTML = `
+
+        <td>
+          ${activity.time}
+        </td>
+
+        <td>
+          <strong>
+            ${activity.event}
+          </strong>
+        </td>
+
+        <td>
+          ${activity.identifier}
+        </td>
+
+        <td>
+          ${activity.gate}
+        </td>
+
+        <td>
+          ${activity.method}
+        </td>
+
+        <td>
+          ${activity.result}
+        </td>
+
+      `;
+
+
+      tbody.appendChild(row);
+
+    });
+
+  }
+
+
+  openModal(
+    "officerActivityModal"
+  );
+
+}
+
+
+/* ============================================================
+   ADD OFFICER
+============================================================ */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function() {
+
+    renderOfficersTable();
+
+
+    const form =
+      document.getElementById(
+        "addOfficerForm"
+      );
+
+
+    if (form) {
+
+      form.addEventListener(
+        "submit",
+        function(event) {
+
+          event.preventDefault();
+
+
+          const password =
+            document.getElementById(
+              "offPassword"
+            ).value;
+
+
+          const confirmPassword =
+            document.getElementById(
+              "offPasswordConfirm"
+            ).value;
+
+
+          if (password !== confirmPassword) {
+
+            showToast(
+              "Password Error",
+              "The passwords do not match.",
+              "error"
+            );
+
+            return;
+
+          }
+
+
+          const badge =
+            document.getElementById(
+              "offBadge"
+            ).value
+              .trim()
+              .toUpperCase();
+
+
+          const duplicate =
+            securityOfficersList.some(
+              officer =>
+                officer.id === badge
+            );
+
+
+          if (duplicate) {
+
+            showToast(
+              "Duplicate Badge",
+              "This badge number already exists.",
+              "error"
+            );
+
+            return;
+
+          }
+
+
+          const newOfficer = {
+
+            id: badge,
+
+            name:
+              document.getElementById(
+                "offName"
+              ).value.trim(),
+
+            phone:
+              document.getElementById(
+                "offPhone"
+              ).value.trim(),
+
+            email:
+              document.getElementById(
+                "offEmail"
+              ).value.trim(),
+
+            username:
+              document.getElementById(
+                "offUsername"
+              ).value.trim(),
+
+            gate:
+              document.getElementById(
+                "offGate"
+              ).value,
+
+            shift:
+              document.getElementById(
+                "offShift"
+              ).value,
+
+            dutyStatus:
+              "OFF DUTY",
+
+            accountStatus:
+              "Active"
+
+          };
+
+
+          securityOfficersList.push(
+            newOfficer
+          );
+
+
+          closeModal(
+            "addOfficerModal"
+          );
+
+
+          form.reset();
+
+
+          renderOfficersTable();
+
+
+          showToast(
+            "Officer Added",
+            `${newOfficer.name} account created successfully.`,
+            "success"
+          );
+
+        }
+      );
+
+    }
+
+
+    /* ========================================================
+       EDIT FORM
+    ======================================================== */
+
+    const editForm =
+      document.getElementById(
+        "editOfficerForm"
+      );
+
+
+    if (editForm) {
+
+      editForm.addEventListener(
+        "submit",
+        function(event) {
+
+          event.preventDefault();
+
+
+          const id =
+            document.getElementById(
+              "editOfficerId"
+            ).value;
+
+
+          const officer =
+            securityOfficersList.find(
+              item => item.id === id
+            );
+
+
+          if (!officer) {
+            return;
+          }
+
+
+          officer.name =
+            document.getElementById(
+              "editOfficerName"
+            ).value.trim();
+
+
+          officer.phone =
+            document.getElementById(
+              "editOfficerPhone"
+            ).value.trim();
+
+
+          officer.email =
+            document.getElementById(
+              "editOfficerEmail"
+            ).value.trim();
+
+
+          officer.gate =
+            document.getElementById(
+              "editOfficerGate"
+            ).value;
+
+
+          officer.shift =
+            document.getElementById(
+              "editOfficerShift"
+            ).value;
+
+
+          officer.accountStatus =
+            document.getElementById(
+              "editOfficerStatus"
+            ).value;
+
+
+          if (
+            officer.accountStatus ===
+            "Inactive"
+          ) {
+
+            officer.dutyStatus =
+              "OFF DUTY";
+
+          }
+
+
+          /*
+           * If no gate or shift is assigned,
+           * officer cannot be ON DUTY.
+           */
+
+          if (
+            officer.gate === "Not Assigned" ||
+            officer.shift === "Not Assigned"
+          ) {
+
+            officer.dutyStatus =
+              "OFF DUTY";
+
+          }
+
+
+          closeModal(
+            "editOfficerModal"
+          );
+
+
+          renderOfficersTable();
+
+
+          showToast(
+            "Officer Updated",
+            `${officer.name}'s account and assignment were updated.`,
+            "success"
+          );
+
+        }
+      );
+
+    }
+
+
+    /* ========================================================
+       RESET PASSWORD FORM
+    ======================================================== */
+
+    const resetForm =
+      document.getElementById(
+        "resetPasswordForm"
+      );
+
+
+    if (resetForm) {
+
+      resetForm.addEventListener(
+        "submit",
+        function(event) {
+
+          event.preventDefault();
+
+
+          const password =
+            document.getElementById(
+              "resetPassword"
+            ).value;
+
+
+          const confirmPassword =
+            document.getElementById(
+              "resetPasswordConfirm"
+            ).value;
+
+
+          if (password !== confirmPassword) {
+
+            showToast(
+              "Password Error",
+              "The passwords do not match.",
+              "error"
+            );
+
+            return;
+
+          }
+
+
+          const id =
+            document.getElementById(
+              "resetOfficerId"
+            ).value;
+
+
+          const officer =
+            securityOfficersList.find(
+              item => item.id === id
+            );
+
+
+          if (!officer) {
+            return;
+          }
+
+
+          closeModal(
+            "resetPasswordModal"
+          );
+
+
+          resetForm.reset();
+
+
+          showToast(
+            "Password Reset",
+            `${officer.name}'s temporary password has been reset.`,
+            "success"
+          );
+
+        }
+      );
+
+    }
+
+  }
+);
+
+</script>
+
+</body>
+</html>

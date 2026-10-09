@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Companies - Gate Management System</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+
+      <div class="brand-text">
+        <div class="brand-title">
+          GMS SECURE <span class="brand-tag">v2.4</span>
+        </div>
+
+        <div class="brand-subtitle">
+          Industrial Park Gate System
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="sidebar-nav">
+
+      <!-- CORE OPERATIONS -->
+      <div class="nav-section-title">Core Operations</div>
+
+      <div class="nav-item">
+        <a href="dashboard.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+
+          <span>Dashboard</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="gate-monitoring.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="m4.93 4.93 4.24 4.24"/>
+            <path d="m14.83 9.17 4.24-4.24"/>
+            <path d="m14.83 14.83 4.24 4.24"/>
+            <path d="m9.17 14.83-4.24 4.24"/>
+          </svg>
+
+          <span>Gate Monitoring</span>
+
+          <span class="nav-badge badge-primary">
+            2 GATES
+          </span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="vehicles.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8c-.3.5-.1 1.2.4 1.5.2.1.5.2.7.2H5v3c0 .6.4 1 1 1h2"/>
+            <circle cx="7" cy="17" r="2"/>
+            <circle cx="17" cy="17" r="2"/>
+          </svg>
+
+          <span>Vehicles</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="visitors.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+
+          <span>Visitors</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="qr-access.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+
+          <span>QR Access</span>
+
+        </a>
+      </div>
+
+
+      <!-- FREIGHT & LOGISTICS -->
+      <div class="nav-section-title">
+        Freight & Logistics
+      </div>
+
+
+      <div class="nav-item">
+        <a href="logistics.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+
+          <span>Logistics</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="items-out.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+
+          <span>Items Out</span>
+
+        </a>
+      </div>
+
+
+      <!-- SURVEILLANCE & AUDIT -->
+      <div class="nav-section-title">
+        Surveillance & Audit
+      </div>
+
+
+      <div class="nav-item">
+        <a href="cameras.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+
+          <span>Cameras</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="access-logs.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+
+          <span>Access Logs</span>
+
+        </a>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="companies.html" class="nav-link active">
+
+          <svg viewBox="0 0 24 24">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+            <line x1="9" y1="22" x2="9" y2="22.01"/>
+            <line x1="15" y1="22" x2="15" y2="22.01"/>
+            <line x1="9" y1="6" x2="9" y2="6.01"/>
+            <line x1="15" y1="6" x2="15" y2="6.01"/>
+            <line x1="9" y1="10" x2="9" y2="10.01"/>
+            <line x1="15" y1="10" x2="15" y2="10.01"/>
+            <line x1="9" y1="14" x2="9" y2="14.01"/>
+            <line x1="15" y1="14" x2="15" y2="14.01"/>
+            <line x1="9" y1="18" x2="9" y2="18.01"/>
+            <line x1="15" y1="18" x2="15" y2="18.01"/>
+          </svg>
+
+          <span>Companies</span>
+
+        </a>
+      </div>
+
+
+      <!-- ADMINISTRATION -->
+      <div class="nav-section-title">
+        Administration
+      </div>
+
+
+      <div class="nav-item">
+        <a href="reports.html" class="nav-link">
+
+          <svg viewBox="0 0 24 24">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+
+          <span>Reports</span>
+
+        </a>
+      </div>
+
+    </nav>
+
+
+    <!-- ==================== USER SESSION ==================== -->
+    <div class="sidebar-footer">
+
+      <div class="user-profile-widget">
+
+        <div class="user-avatar">
+          OT
+        </div>
+
+        <div class="user-details">
+
+          <div class="user-name">
+            Officer Tadesse
+          </div>
+
+          <div class="user-role">
+            <span class="user-role-dot"></span>
+            Security Officer
+          </div>
+
+        </div>
+
+
+        <a href="../index.html"
+           class="btn-logout"
+           title="End Shift / Logout">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="main-wrapper">
+
+
+    <!-- ==================== TOP HEADER ==================== -->
+    <header class="top-header">
+
+      <div class="header-left">
+
+        <button class="btn-sidebar-toggle" id="btnSidebarToggle">
+
+          <svg width="22"
+               height="22"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2">
+
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+
+          </svg>
+
+        </button>
+
+
+        <div class="header-title-group">
+
+          <h1>
+            Company Directory
+          </h1>
+
+          <div class="header-breadcrumb">
+            Gate Management System
+            <span>/</span>
+            Companies
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="header-right">
+
+        <!-- Static role display for prototype.
+             Final PHP version will use the logged-in session. -->
+        <div class="role-badge-selector">
+
+          <span style="color:#64748b; font-weight:500;">
+            Role:
+          </span>
+
+          <strong style="color:#334155; font-weight:600;">
+            Security Officer
+          </strong>
+
+        </div>
+
+
+        <div class="live-clock-widget"
+             id="liveSystemClock">
+          --:--:-- EAT
+        </div>
+
+
+        <button class="icon-btn"
+                id="btnNotificationBell">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+
+          </svg>
+
+          <span class="icon-btn-badge">
+            2
+          </span>
+
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- ==================== NOTIFICATION PANEL ==================== -->
+    <div class="notifications-panel"
+         id="notificationsPanel">
+
+      <div class="panel-header">
+
+        <span class="panel-title">
+          System Alerts
+        </span>
+
+      </div>
+
+      <div class="notifications-list"
+           id="headerNotificationsList">
+      </div>
+
+    </div>
+
+
+    <!-- ==================== CONTENT BODY ==================== -->
+    <div class="content-body">
+
+
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+
+        <div class="page-title-desc">
+
+          <h2>
+            Company Directory
+          </h2>
+
+          <p>
+            Manage company records used for vehicle registration,
+            visitor registration, logistics, and gate access records.
+          </p>
+
+        </div>
+
+
+        <div class="page-actions">
+
+          <button class="btn btn-primary"
+                  onclick="openModal('addCompanyModal')">
+
+            <svg viewBox="0 0 24 24">
+
+              <line x1="12"
+                    y1="5"
+                    x2="12"
+                    y2="19"/>
+
+              <line x1="5"
+                    y1="12"
+                    x2="19"
+                    y2="12"/>
+
+            </svg>
+
+            Add New Company
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- ==================== COMPANIES TABLE ==================== -->
+      <div class="card">
+
+        <div class="table-container">
+
+          <table class="data-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Company Name & Location
+                </th>
+
+                <th>
+                  Industry Sector
+                </th>
+
+                <th>
+                  Contact Person
+                </th>
+
+                <th>
+                  Phone Number
+                </th>
+
+                <th>
+                  Official Email
+                </th>
+
+                <th>
+                  Registered Vehicles
+                </th>
+
+                <th>
+                  Active Visitors
+                </th>
+
+                <th>
+                  Status
+                </th>
+
+                <th>
+                  Actions
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody id="companiesTableBody">
+
+              <!-- Rendered dynamically by JavaScript -->
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- ADD COMPANY MODAL                                         -->
+<!-- ========================================================= -->
+
+<div class="modal-backdrop"
+     id="addCompanyModal">
+
+  <div class="modal-dialog">
+
+
+    <div class="modal-header">
+
+      <div class="modal-title">
+        Register Company
+      </div>
+
+      <button class="modal-close-btn"
+              onclick="closeModal('addCompanyModal')">
+
+        &times;
+
+      </button>
+
+    </div>
+
+
+    <form id="addCompanyForm">
+
+      <div class="modal-body">
+
+
+        <!-- COMPANY INFORMATION -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Company Name
+            </label>
+
+            <input
+              type="text"
+              id="addCompName"
+              class="form-input"
+              placeholder="e.g. Ethiopian Solar Tech PLC"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Industry Category
+            </label>
+
+            <input
+              type="text"
+              id="addCompCategory"
+              class="form-input"
+              placeholder="e.g. Electronics & Solar Assembly"
+              required
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- CONTACT INFORMATION -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Contact Person
+            </label>
+
+            <input
+              type="text"
+              id="addCompContact"
+              class="form-input"
+              placeholder="e.g. Dawit Bekele"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Phone Number
+            </label>
+
+            <input
+              type="tel"
+              id="addCompPhone"
+              class="form-input"
+              placeholder="+251 91 100 2030"
+              required
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- EMAIL + LOCATION -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Email Address
+            </label>
+
+            <input
+              type="email"
+              id="addCompEmail"
+              class="form-input"
+              placeholder="contact@company.et"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label required">
+              Building / Location
+            </label>
+
+            <input
+              type="text"
+              id="addCompBuilding"
+              class="form-input"
+              placeholder="e.g. Shed 14, Zone B"
+              required
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="modal-footer">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="closeModal('addCompanyModal')">
+
+          Cancel
+
+        </button>
+
+
+        <button
+          type="submit"
+          class="btn btn-primary">
+
+          Save Company
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- VIEW COMPANY DETAILS MODAL                                -->
+<!-- ========================================================= -->
+
+<div class="modal-backdrop"
+     id="viewCompanyModal">
+
+  <div class="modal-dialog">
+
+
+    <div class="modal-header">
+
+      <div class="modal-title">
+        Company Profile
+      </div>
+
+      <button
+        class="modal-close-btn"
+        onclick="closeModal('viewCompanyModal')">
+
+        &times;
+
+      </button>
+
+    </div>
+
+
+    <div
+      class="modal-body"
+      id="viewCompanyModalBody">
+    </div>
+
+
+    <div class="modal-footer">
+
+      <button
+        type="button"
+        class="btn btn-secondary"
+        onclick="closeModal('viewCompanyModal')">
+
+        Close
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ==================== CORE SCRIPT ==================== -->
+<script src="../js/app.js"></script>
+
+
+<script>
+
+  /* =========================================================
+     RENDER COMPANY TABLE
+     ========================================================= */
+
+  function renderCompaniesTable() {
+
+    const tbody =
+      document.getElementById("companiesTableBody");
+
+    if (!tbody) return;
+
+
+    tbody.innerHTML =
+      GMS_STORE.companies.map(c => `
+
+        <tr>
+
+          <td>
+
+            <strong>
+              ${c.name}
+            </strong>
+
+            <div style="
+              font-size:0.75rem;
+              color:#64748b;
+            ">
+              ${c.building}
+            </div>
+
+          </td>
+
+
+          <td>
+            ${c.category}
+          </td>
+
+
+          <td>
+            ${c.contactPerson}
+          </td>
+
+
+          <td>
+            ${c.phone}
+          </td>
+
+
+          <td>
+            ${c.email}
+          </td>
+
+
+          <td>
+
+            <strong
+              style="
+                font-family:ui-monospace;
+                font-size:0.95rem;
+              ">
+
+              ${c.vehicleCount}
+
+            </strong>
+
+          </td>
+
+
+          <td>
+
+            <span class="
+              badge
+              ${c.activeVisitors > 0
+                ? 'badge-inside'
+                : 'badge-neutral'}
+            ">
+
+              ${c.activeVisitors} Inside
+
+            </span>
+
+          </td>
+
+
+          <td>
+
+            <span class="badge badge-active">
+
+              ${c.status}
+
+            </span>
+
+          </td>
+
+
+          <td>
+
+            <button
+              class="btn btn-sm btn-outline"
+              onclick="viewCompany('${c.id}')">
+
+              View
+
+            </button>
+
+          </td>
+
+        </tr>
+
+      `).join("");
+
+  }
+
+
+  /* =========================================================
+     VIEW COMPANY
+     ========================================================= */
+
+  function viewCompany(compId) {
+
+    const company =
+      GMS_STORE.companies.find(
+        comp => comp.id === compId
+      );
+
+    if (!company) return;
+
+
+    const body =
+      document.getElementById(
+        "viewCompanyModalBody"
+      );
+
+
+    body.innerHTML = `
+
+      <div style="
+        display:flex;
+        flex-direction:column;
+        gap:16px;
+      ">
+
+
+        <!-- COMPANY HEADER -->
+        <div style="
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          border-bottom:1px solid var(--border-color);
+          padding-bottom:12px;
+        ">
+
+          <div>
+
+            <h3 style="
+              font-size:1.2rem;
+              color:#0f172a;
+            ">
+
+              ${company.name}
+
+            </h3>
+
+
+            <span style="
+              font-size:0.8rem;
+              color:#64748b;
+            ">
+
+              ${company.category}
+              •
+              ${company.building}
+
+            </span>
+
+          </div>
+
+
+          <span class="badge badge-active">
+
+            ${company.status}
+
+          </span>
+
+        </div>
+
+
+        <!-- CONTACT -->
+        <div class="form-row">
+
+          <div>
+
+            <label class="form-label">
+              Contact Person
+            </label>
+
+            <strong>
+              ${company.contactPerson}
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <label class="form-label">
+              Phone
+            </label>
+
+            <span>
+              ${company.phone}
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- EMAIL + LOCATION -->
+        <div class="form-row">
+
+          <div>
+
+            <label class="form-label">
+              Email
+            </label>
+
+            <span>
+              ${company.email}
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <label class="form-label">
+              Location
+            </label>
+
+            <span>
+              ${company.building}
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- GMS RELATED DATA -->
+        <div class="form-row">
+
+          <div>
+
+            <label class="form-label">
+              Registered Vehicles
+            </label>
+
+            <strong>
+              ${company.vehicleCount} vehicles
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <label class="form-label">
+              Visitors Currently Inside
+            </label>
+
+            <strong>
+              ${company.activeVisitors} visitors
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    `;
+
+
+    openModal("viewCompanyModal");
+
+  }
+
+
+  /* =========================================================
+     ADD COMPANY
+     ========================================================= */
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+      renderCompaniesTable();
+
+
+      const form =
+        document.getElementById(
+          "addCompanyForm"
+        );
+
+
+      if (!form) return;
+
+
+      form.addEventListener(
+        "submit",
+        (e) => {
+
+          e.preventDefault();
+
+
+          const newCompany = {
+
+            id:
+              "COMP-" +
+              String(
+                GMS_STORE.companies.length + 1
+              ).padStart(3, "0"),
+
+            name:
+              document
+                .getElementById("addCompName")
+                .value
+                .trim(),
+
+            category:
+              document
+                .getElementById("addCompCategory")
+                .value
+                .trim(),
+
+            contactPerson:
+              document
+                .getElementById("addCompContact")
+                .value
+                .trim(),
+
+            phone:
+              document
+                .getElementById("addCompPhone")
+                .value
+                .trim(),
+
+            email:
+              document
+                .getElementById("addCompEmail")
+                .value
+                .trim()
+                || "N/A",
+
+            building:
+              document
+                .getElementById("addCompBuilding")
+                .value
+                .trim(),
+
+            vehicleCount: 0,
+
+            activeVisitors: 0,
+
+            status: "Active"
+
+          };
+
+
+          GMS_STORE.companies.push(
+            newCompany
+          );
+
+
+          saveStore(GMS_STORE);
+
+
+          closeModal(
+            "addCompanyModal"
+          );
+
+
+          form.reset();
+
+
+          renderCompaniesTable();
+
+
+          showToast(
+            "Company Registered",
+            `${newCompany.name} added to the company directory.`,
+            "success"
+          );
+
+        }
+      );
+
+    }
+  );
+
+</script>
+
+</body>
+</html>
